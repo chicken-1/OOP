@@ -1,7 +1,6 @@
 ablaze	rực cháy, bừng bừng, rừng rực
 aghast	hoảng hồn, kinh hoàng
 agitate	khích động, khuấy động 
-angel	thiên thần, thiên sứ
 angle	góc
 animosity	tình trạng thù địch, hận thù
 appalling	kinh khủng
@@ -9,7 +8,7 @@ atrocity	sự hung bạo, tàn ác, gớm ghiếc
 aurora	cực quang
 blade	lưỡi (đao, dao, kiếm)
 calamity	tai họa
-cascade	thác nước	
+cascade	thác nước
 ceasefire	ngừng bắn
 chasm	sự cách biệt lớn
 contrite	ăn năn, hối lỗi

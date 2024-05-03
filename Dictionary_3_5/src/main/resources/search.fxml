@@ -58,7 +58,7 @@
                 <HBox layoutX="25.0" layoutY="17.0" prefHeight="40.0" prefWidth="390.0" />
                 <AnchorPane layoutX="10.0" layoutY="87.0" prefHeight="468.0" prefWidth="472.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="87.0">
                     <children>
-                        <WebView fx:id="definitionView" layoutX="-7.2" layoutY="-84.0" prefHeight="562.0" prefWidth="499.0" styleClass="word-explain" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-84.0" />
+                        <WebView fx:id="definitionView" layoutX="-7.2" layoutY="-84.0" prefHeight="562.0" prefWidth="499.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-84.0" />
                         <HTMLEditor fx:id="editDefinition" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="-77.6" prefHeight="556.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                         <Button fx:id="speaker" layoutX="354.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleClickSpeaker" prefHeight="30.0" prefWidth="28.0" styleClass="buttonSpeaker" textFill="#8e9297">
                             <font>

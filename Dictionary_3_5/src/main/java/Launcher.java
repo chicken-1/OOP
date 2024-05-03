@@ -5,3 +5,4 @@ public class Launcher {
         Application.launch(Dictionary_application.class,args);
     }
 }
+

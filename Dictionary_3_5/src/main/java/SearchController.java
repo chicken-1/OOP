@@ -12,11 +12,12 @@ import javafx.scene.web.WebView;
 
 
 import java.util.List;
-
+import java.util.Optional;
 
 
 public class SearchController {
     private DictionaryManagement dictionaryManagement;
+    private Word selectedWord;
     private final ObservableList<Word> wordList = FXCollections.observableArrayList();
 
     @FXML
@@ -78,7 +79,7 @@ public class SearchController {
 
     @FXML
     private void handleClickListView() {
-        Word selectedWord = wordListView.getSelectionModel().getSelectedItem();
+        this.selectedWord = wordListView.getSelectionModel().getSelectedItem();
         if (selectedWord == null) {
             // Show an error message
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -92,12 +93,13 @@ public class SearchController {
         // Load the defination for the selected word
         String word_target = selectedWord.getWord_target();
         Word word = dictionaryManagement.dictionaryLookup(word_target);
-        /*editDefinition.setHtmlText("<html><body><h1>" + word.getWord_target() + "</h1><p>" + word.getWord_explain() + "</p></body></html>");
-        editDefinition.setVisible(true);*/
-        definitionView.getEngine().loadContent("<html><head><link rel='stylesheet' type='text/css' href='style.css'></head><body>" +
+        editDefinition.setHtmlText("<html><body><h1>" + word.getWord_target() + "</h1><p>" + word.getWord_explain() + "</p></body></html>");
+        editDefinition.setVisible(true);
+        /*definitionView.getEngine().loadContent("<html><head><link rel='stylesheet' type='text/css' href='style.css'></head><body>" +
                 "<div class='word-target'>" + word.getWord_target() + "</div>" +
                 "<div class='word-explain'>" + word.getWord_explain() + "</div>" +
-                "</body></html>");
+                "</body></html>");*/
+
     }
 
     @FXML
@@ -106,12 +108,25 @@ public class SearchController {
     }
 
     @FXML
-    private void handleRemoveButton(ActionEvent actionEvent) {
+    private void handleClickSpeaker(ActionEvent actionEvent) {
 
     }
 
     @FXML
-    private void handleClickSpeaker(ActionEvent actionEvent) {
-
+    private void handleRemoveButton(ActionEvent actionEvent) {
+        // Confirm removal
+        Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
+        confirmAlert.setTitle("Confirm removal");
+        confirmAlert.setHeaderText("Remove word: " + selectedWord.getWord_target());
+        confirmAlert.setContentText("Are you sure you want to remove this word?");
+        Optional<ButtonType> result = confirmAlert.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            // remove the word from dictionary
+            dictionaryManagement.removeWord(selectedWord.getWord_target());
+            dictionaryManagement.exportToFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+            wordList.remove(selectedWord);
+            wordListView.getSelectionModel().clearSelection();
+            editDefinition.setVisible(false);
+        }
     }
 }
