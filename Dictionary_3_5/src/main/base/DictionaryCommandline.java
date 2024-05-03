@@ -71,8 +71,8 @@ public class DictionaryCommandline {
                         List<Word> searchResults = dictionaryManagement.dictionarySearcher(wordTargetSearch);
                         System.out.println("Search results:");
                         for (int i = 0; i < searchResults.size(); i++) {
-                            Word word = searchResults.get(i);
-                            System.out.println((i + 1) + ". " + word.getWord_target());
+                            Word word1 = searchResults.get(i);
+                            System.out.println((i + 1) + ". " + word1.getWord_target());
                         }
                         break;
                     case 7: 

@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 public class Dictionary_application extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("search.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Dictionary_application.class.getResource("search.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 875,600 );
         primaryStage.setTitle("Dictionary Application");
         primaryStage.setScene(scene);
