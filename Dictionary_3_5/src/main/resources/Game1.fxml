@@ -3,11 +3,12 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.web.HTMLEditor?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@../style/Game1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameController">
     <children>
@@ -87,11 +88,50 @@
         </AnchorPane>
         <AnchorPane layoutX="320.8" prefHeight="573.0" prefWidth="501.0" style="-fx-background-radius: 10; -fx-background-color: ffffff;" styleClass="first-color" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
             <children>
-                <AnchorPane layoutX="10.0" layoutY="87.0" prefHeight="468.0" prefWidth="472.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="87.0">
+                <AnchorPane layoutX="10.0" layoutY="200.0" prefHeight="366.0" prefWidth="486.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="160.0">
                     <children>
-                        <HTMLEditor fx:id="editDefinition" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="-77.6" prefHeight="556.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Button layoutX="140.0" layoutY="16.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="200.0" styleClass="dapAnSai" AnchorPane.topAnchor="20.0">
+                     <graphic>
+                        <RadioButton contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="199.0" styleClass="dapan" text="one" textAlignment="CENTER" textFill="#434d65" textOverrun="CENTER_WORD_ELLIPSIS">
+                           <font>
+                              <Font name="Inter Semi Bold" size="14.0" />
+                           </font></RadioButton>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="140.0" layoutY="100.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="200.0" styleClass="dapAnDung" AnchorPane.topAnchor="100.0">
+                     <graphic>
+                        <RadioButton contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="184.0" styleClass="dapan" text="one" textAlignment="CENTER" textFill="#434d65" textOverrun="CENTER_WORD_ELLIPSIS">
+                           <font>
+                              <Font name="Inter Semi Bold" size="14.0" />
+                           </font>
+                        </RadioButton>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="140.0" layoutY="239.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="200.0" styleClass="dapAnThuong" AnchorPane.topAnchor="260.0">
+                     <graphic>
+                        <RadioButton contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="184.0" style="-fx-border-radius: 10 10 10 10;" text="one" textAlignment="CENTER" textFill="#434d65" textOverrun="CENTER_WORD_ELLIPSIS">
+                           <font>
+                              <Font name="Inter Semi Bold" size="14.0" />
+                           </font>
+                        </RadioButton>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="140.0" layoutY="169.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="200.0" styleClass="dapAnThuong" AnchorPane.topAnchor="180.0">
+                     <graphic>
+                        <RadioButton contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="184.0" text="one" textAlignment="CENTER" textFill="#434d65" textOverrun="CENTER_WORD_ELLIPSIS">
+                           <font>
+                              <Font name="Inter Semi Bold" size="14.0" />
+                           </font>
+                        </RadioButton>
+                     </graphic>
+                  </Button>
                     </children>
                 </AnchorPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="31.0" prefHeight="117.0" prefWidth="424.0" text="Question" textFill="#0a3694">
+               <font>
+                  <Font name="SVN-GilroyXBoldItalic" size="20.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
     </children>
