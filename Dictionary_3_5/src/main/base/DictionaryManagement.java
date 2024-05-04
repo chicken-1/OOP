@@ -65,7 +65,7 @@ public class DictionaryManagement {
                 String line = scanner.nextLine();
                 String[] words = line.split("\t");
                 if (words.length > 0) {
-                    Word word = new Word(words[0], words[1]);
+                    Word word = new Word(words[0], words[1], words[2], words[3]);
                     this.dictionary.addWord(word);
                 } else {
                     System.out.println("Skipping empty line.");
@@ -125,7 +125,7 @@ public class DictionaryManagement {
             List<Word> words = dictionary.getDictionary();
             for (int i = 0; i < words.size(); i++) {
                 Word word = words.get(i);
-                bw.write(word.getWord_target() + "\t" + word.getWord_explain());
+                bw.write(word.getWord_target() + "\t" + word.getWord_type() + "\t" + word.getWord_pronunciation() + "\t" + word.getWord_explain());
                 bw.newLine();
             }
         } catch (IOException e) {

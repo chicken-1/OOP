@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@../style/Game1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchController">
+<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@../style/Game1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameController">
     <children>
         <AnchorPane layoutX="40.0" prefHeight="600.0" prefWidth="319.0" styleClass="panecolor1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -51,14 +51,14 @@
                      <children>
                         <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
                            <graphic>
-                              <ImageView fitHeight="182.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="multiChoice_game" fitHeight="182.0" fitWidth="182.0" onMouseClicked="#handleClickMulti_game" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../image/4x/gamchondapan.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch2" alignment="CENTER" prefHeight="46.0" prefWidth="204.0" text="Chọn đáp án đúng" textFill="#1d93f3">
+                        <Label fx:id="titleSearch2" alignment="CENTER" onMouseClicked="#handleClickMulti_game" prefHeight="46.0" prefWidth="204.0" text="Chọn đáp án đúng" textFill="#1d93f3">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding></Label>
@@ -68,14 +68,14 @@
                      <children>
                         <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
                            <graphic>
-                              <ImageView fitHeight="182.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="matching_ame" fitHeight="182.0" fitWidth="182.0" onMouseClicked="#handleClickMatching_game" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../image/4x/gamenoitu.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch21" alignment="CENTER" prefHeight="120.0" prefWidth="204.0" text="Nối từ" textFill="WHITE">
+                        <Label fx:id="titleSearch21" alignment="CENTER" onMouseClicked="#handleClickMatching_game" prefHeight="120.0" prefWidth="204.0" text="Nối từ" textFill="WHITE">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding></Label>

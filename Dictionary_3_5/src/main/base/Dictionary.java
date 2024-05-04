@@ -38,9 +38,10 @@ public class Dictionary {
         }
 
     public void display() {
-        System.out.println("No     \t|English     \t|Vietnamese");
+        System.out.println("No        \t|English            \t|Word_type            \t|Pronunciation            \t|Vietnamese");
         for (int i = 0; i < words.size(); i++) {
-            System.out.println(i + 1 + "     \t|" + words.get(i).getWord_target() + "     \t|" + words.get(i).getWord_explain());
+            System.out.println(i + 1 + "        \t|" + words.get(i).getWord_target() + "            \t|" + words.get(i).getWord_type()
+                    + "            \t|" + words.get(i).getWord_pronunciation() + "            \t|" + words.get(i).getWord_explain());
         }
     }
 

@@ -7,11 +7,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.web.HTMLEditor;
 import javafx.scene.web.WebView;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -65,6 +71,7 @@ public class SearchController {
     @FXML
     private void searchFieldAction(KeyEvent event) {
         String search = searchField.getText();
+        search = search.toLowerCase();
         List<Word> words = dictionaryManagement.dictionarySearcher(search);
         if (words.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -95,8 +102,20 @@ public class SearchController {
         // Load the defination for the selected word
         String word_target = selectedWord.getWord_target();
         Word word = dictionaryManagement.dictionaryLookup(word_target);
-        /*editDefinition.setHtmlText("<html><body><h1>" + word.getWord_target() + "</h1><p>" + word.getWord_explain() + "</p></body></html>");
-        editDefinition.setVisible(true);*/
+
+        String wordType, pronunciation, word_explain;
+        if (word.getWord_type().isEmpty()){
+            wordType = "Updating";
+        } else wordType = word.getWord_type();
+        if (word.getWord_pronunciation().isEmpty()) {
+            pronunciation = "Updating";
+        } else pronunciation = word.getWord_pronunciation();
+        if (word.getWord_explain().isEmpty()) {
+            word_explain = "Updating";
+        } else word_explain = word.getWord_explain();
+
+
+        // set up presentation of difinitionView
         definitionView.getEngine().loadContent(
                 "<html><head><link rel='stylesheet' type='text/css' href='search.css'></head><body>" +
                         "<div style='font-family: \"SVN-Gilroy Heavy\";" +
@@ -120,8 +139,13 @@ public class SearchController {
         // Create the word and definition fields
         TextField wordField = new TextField();
         wordField.setPromptText("Word");
+        TextField wordTypeFeild = new TextField();
+        wordTypeFeild.setPromptText("Word type");
+        TextField pronunciationField = new TextField();
+        pronunciationField.setPromptText("Pronunciation");
         TextField definitionField = new TextField();
         definitionField.setPromptText("Definition");
+
 
         // Create the dialog content
         GridPane content = new GridPane();
@@ -129,8 +153,13 @@ public class SearchController {
         content.setVgap(10);
         content.add(new Label("Word:"), 0, 0);
         content.add(wordField, 1, 0);
-        content.add(new Label("Definition:"), 0, 1);
-        content.add(definitionField, 1, 1);
+        content.add(new Label("Word type:"), 0, 1);
+        content.add(wordTypeFeild, 1, 1);
+        content.add(new Label("Pronunciation:"), 0, 2);
+        content.add(pronunciationField, 1, 2);
+        content.add(new Label("Definition:"), 0, 3);
+        content.add(definitionField, 1, 3);
+
 
         // Set the dialog content
         dialog.getDialogPane().setContent(content);
@@ -142,8 +171,8 @@ public class SearchController {
 
         // Create the result converter
         dialog.setResultConverter(dialogButton -> {
-            if (dialogButton == okButtonType) {
-                Word word = new Word(wordField.getText(), definitionField.getText());
+            if (dialogButton == okButtonType && !wordField.getText().trim().isEmpty()) {
+                Word word = new Word(wordField.getText(), wordTypeFeild.getText(), pronunciationField.getText(), definitionField.getText());
                 return word;
             }
             return null;
@@ -254,5 +283,15 @@ public class SearchController {
             handleClickListView();
 
         }
+    }
+
+    @FXML
+    public void handleClickGame(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Game1.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }

@@ -1,100 +1,120 @@
-ablaze	rực cháy, bừng bừng, rừng rực
-aghast	hoảng hồn, kinh hoàng
-agitate	khích động, khuấy động 
-animosity	tình trạng thù địch, hận thù
-appalling	kinh khủng
-atrocity	sự hung bạo, tàn ác, gớm ghiếc
-aurora	cực quang
-blade	lưỡi (đao, dao, kiếm)
-calamity	tai họa
-cascade	thác nước
-ceasefire	ngừng bắn
-chasm	sự cách biệt lớn
-contrite	ăn năn, hối lỗi
-cruel	tàn nhẫn
-dawn	bình minh
-delicacy	cao lương mĩ vị
-demon	quỷ
-demure	đoan trang
-despondent	nản lòng, chán nản
-discipline	kỷ luật
-disgrace	sự nhục nhã, sự sỉ nhục
-dismay	sự thất vọng, sự mất tinh thần
-drought	hạn hán
-dusk	hoàng hôn
-ecstatic	ngây ngất, (sướng) mê ly
-embellish	tô điểm, trang điểm, làm đẹp
-eminent	kiệt xuất, lỗi lạc, xuất chúng
-empire	vương quốc, đế chế
-emperor	hoàng đế
-empress	nữ vương
-encapsulate	tóm lược, gói gọn
-ephemeral	sớm nở chóng tàn
-esoteric	bí truyền
-estrangement	sự xa rời, sự ghẻ lạnh
-evil	độc ác
-exquisite	tuyệt mĩ, tinh tế, thấm thía
-famine	nạn đói
-ferment	lên men
-flood	lũ lụt
-forfeit	tiền phạt, mất quyền
-god	thần, Chúa
-goddess	nữ thần
-greenhorn	lính mới, người chưa có kinh nghiệm
-hegemony	quyền lãnh đạo
-implicit	ngầm, ngấm ngầm
-incredulous	hoài nghi, ngờ vực
-indolent	lười nhác
-innuendo	ám chỉ, ngụ ý, bóng gió
-interim	tạm quyền, lâm thời
-jargon	biệt ngữ, thuật ngữ
-jest	bỡn cợt, chế nhạo
-king	nhà vua
-kismet	duyên, định mệnh
-miscellaneous	pha tạp, hỗn hợp
-meek	hiền lành, nhu mì, ngoan ngoãn
-myriad	vô số
-omen	điềm
-peace	hòa bình
-perplexed	bối rối, lúng túng
-pertinent	thích đáng, đúng chỗ, có liên quan
-pinnacle	đỉnh cao (núi, tảng đá), đỉnh cao nhất
-profane	báng bổ
-puuzzled	khó xử, bối rối
-queen	nữ hoàng
-recount	thuật lại, kể lại
-rendezvous	cuộc gặp mặt, nơi hẹn gặp
-reserved	kín đáo, dè dặt, kiệm lời
-revenge	trả thù
-revere	tôn kính, sùng kính
-ridiculous	lố bịch, lố lăng, buồn cười
-saint	thánh
-salute	chào nghiêm (quân đội)
-savvy	sự hiểu biết, sự khôn khéo, nhanh nhạy
-scrumptious	hảo hạng, ngon tuyệt
-seasoned	lão luyện, dày dạn
-serene	thanh tịnh, trầm lặng, trong (trời), yên lặng (biển)
-shirk	trốn, lẩn tránh (việc, trách nhiệm)
-shrink	thu nhỏ
-sinister	ác, nham hiểm, gở
-solitude	một mình, nơi tĩnh mịch
-sorcerer	pháp sư
-spellbound	bị mê hoặc
-stagger	lảo đảo, loạng choạng
-stumble	vấp
-stutter	nói lắp
-suave	ngọt ngào, khéo léo, tinh tế (đàn ông)
-sword	kiếm
-travesty	nhại
-utopia	điều không tưởng
-vicious	xấu xa, ác, đồi bại
-villain	phản diện, kẻ xấu
-vindictive	thù oán
-volcano	núi lửa
-whimsical	bất thường, kỳ quái
-wicked	xấu, tội lỗi, ác
-witch	phù thủy
-wizard	thầy phù thủy
-zenith	cực điểm, tột đỉnh
-angel	thiên thần, thiên sứ
-angle	góc
+ablaze	adjective	/əˈbleɪz/	rực cháy, bừng bừng, rừng rực
+aghast	adjective	/əˈɡæst/	hoảng hồn, kinh hoàng
+agitate	verb	/ˈædʒɪteɪt/	khích động, khuấy động 
+angel	noun	/ˈeɪndʒl/	thiên thần, thiên sứ
+angle	noun	/ˈæŋɡl/	góc
+animosity	noun	/ˌænɪˈmɑːsəti/	tình trạng thù địch, hận thù
+appalling	adjective	/əˈpɔːlɪŋ/	kinh khủng
+atrocity	noun	/əˈtrɑːsəti/	sự hung bạo, tàn ác, gớm ghiếc
+aurora	noun	/əːˈrɔːrə/	cực quang
+blade	noun	/bleɪd/	lưỡi (đao, dao, kiếm)
+bulldoze	verb	/ˈbʊldəʊz/	ủi (đất), đe dọa, hăm dọa
+calamity	noun	/kəˈlæməti/	tai họa
+cascade	noun	/kæˈskeɪd/	thác nước
+ceasefire	noun	/ˈsiːsfaɪər/	ngừng bắn
+chasm	noun	/ˈkæzəm/	sự cách biệt lớn
+contrite	adjective	/kənˈtraɪt/	ăn năn, hối lỗi
+cruel	adjective	/ˈkruːəl/	tàn nhẫn
+dawn	noun	/dɔːn/	bình minh
+delicacy	noun	/ˈdelɪkəsi/	cao lương mĩ vị
+demon	noun	/ˈdiːmən/	quỷ
+demure	adjective	/dɪˈmjʊr/	đoan trang
+despondent	adjective	/dɪˈspɑːndənt/	nản lòng, chán nản
+discipline	noun	/ˈdɪsəplɪn/	kỷ luật
+disgrace	noun	/dɪsˈɡreɪs/	sự nhục nhã, sự sỉ nhục
+dismay	noun	/dɪsˈmeɪ/	sự thất vọng, sự mất tinh thần
+drought	noun	/draʊt/	hạn hán
+dusk	noun	/dʌsk/	hoàng hôn
+ecstatic	adjective	/ɪkˈstætɪk/	ngây ngất, (sướng) mê ly
+escalate	verb	/ˈeskəleɪt/	leo thang
+embellish	verb	/ɪmˈbelɪʃ/	tô điểm, trang điểm, làm đẹp
+eminent	adjective	/ˈemɪnənt/	kiệt xuất, lỗi lạc, xuất chúng
+empire	noun	/ˈempaɪər/	vương quốc, đế chế
+emperor	noun	/ˈempərər/	hoàng đế
+empress	noun	/ˈemprəs/	nữ vương
+encapsulate	verb	/ɪnˈkæpsjuleɪt/	tóm lược, gói gọn
+ephemeral	adjective	/ɪˈfemərəl/	sớm nở chóng tàn
+esoteric	adjective	/ˌesəˈterɪk/	bí truyền
+estrangement	noun	/ɪˈstreɪndʒmənt/	sự xa rời, sự ghẻ lạnh
+evil	adjective	/ˈiːvl/	độc ác
+exquisite	adjective	/ɪkˈskwɪzɪt/	tuyệt mĩ, tinh tế, thấm thía
+faith	noun	/feɪθ/	đức tin, niềm tin
+famine	noun	/ˈfæmɪn/	nạn đói
+ferment	verb	/fərˈment/	lên men
+flood	noun	/flʌd/	lũ lụt
+forfeit	noun	/ˈfɔːrfɪt/	tiền phạt, mất quyền
+god	noun	/ɡɑːd/	thần, Chúa
+goddess	noun	/ˈɡɑːdəs/	nữ thần
+grandiose	adjective	/ˈɡrændiəʊs/	vĩ đại, hùng vĩ, phô trương
+greenhorn	noun	/ˈɡriːnhɔːrn/	lính mới, người chưa có kinh nghiệm
+grief	noun	/ɡriːf/	đau buồn (do thương tiếc ai đó đã chết)
+hegemony	noun	/hɪˈdʒeməni/	quyền lãnh đạo
+humanitarian	adjective	/hjuːˌmænɪˈteriən/	nhân đạo
+implicit	adjective	/ɪmˈplɪsɪt/	ngầm, ngấm ngầm
+incredulous	adjective	/ɪnˈkredʒələs/	hoài nghi, ngờ vực
+indignation	noun	/ˌɪndɪɡˈneɪʃn/	sự phẫn nộ, căm phẫn (trước tình huống xã hội)
+indolent	adjective	/ˈɪndələnt/	lười nhác
+innuendo	noun	/ˌɪnjuˈendəʊ/	ám chỉ, ngụ ý, bóng gió
+interim	adjective	/ˈɪntərɪm/	tạm quyền, lâm thời
+jargon	noun	/ˈdʒɑːrɡən/	biệt ngữ, thuật ngữ
+jest	verb	/dʒest/	bỡn cợt, chế nhạo
+king	noun	/kɪŋ/	nhà vua
+kismet	noun	/ˈkɪzmet/	duyên, định mệnh
+leisure	noun	/ˈliːʒər/	thời gian rảnh rỗi
+massacre	verb	/ˈmæsəkər/	thảm sát
+miscellaneous	adjective	/ˌmɪsəˈleɪniəs/	pha tạp, hỗn hợp
+meek	adjective	/miːk/	hiền lành, nhu mì, ngoan ngoãn
+myriad	adjective	/ˈmɪriəd/	vô số
+nexus	noun	/ˈneksəs/	mối quan hệ, mối liên hệ
+numb	adjective	/nʌm/	tê liệt, tê dại, chết lặng đi (cảm xúc)
+omen	noun	/ˈəʊmən/	điềm
+oppress	verb	/priːst/	đàn áp, áp bức
+peace	noun	/piːs/	hòa bình
+perplexed	adjective	/pərˈplekst/	bối rối, lúng túng
+pertinent	adjective	/ˈpɜːrtnənt/	thích đáng, đúng chỗ, có liên quan
+pinnacle	noun	/ˈpɪnəkl/	đỉnh cao (núi, tảng đá), đỉnh cao nhất
+priest	noun	/priːst/	mục sư
+profane	adjective	/prəˈfeɪn/	báng bổ
+puzzled	adjective	/ˈpʌzld/	khó xử, bối rối
+queen	noun	/kwiːn/	nữ hoàng
+recount	verb	/rɪˈkaʊnt/	thuật lại, kể lại
+rendezvous	noun	/ˈrɑːndeɪvuː/	cuộc gặp mặt, nơi hẹn gặp
+repugnace	noun	/rɪˈpʌɡnəns/	sự ác cảm, ghê tởm
+reserved	adjective	/rɪˈzɜːrvd/	kín đáo, dè dặt, kiệm lời
+revenge	verb	/rɪˈvendʒ/	trả thù
+revere	verb	/rɪˈvɪr/	tôn kính, sùng kính
+ridiculous	adjective	/rɪˈdɪkjələs/	lố bịch, lố lăng, buồn cười
+saint	noun	/seɪnt/	thánh
+salute	verb	/səˈluːt/	chào nghiêm (quân đội)
+savvy	noun	/ˈsævi/	sự hiểu biết, sự khôn khéo, nhanh nhạy
+scrumptious	adjective	/ˈskrʌmpʃəs/	hảo hạng, ngon tuyệt
+seasoned	adjective	/ˈsiːznd/	lão luyện, dày dạn
+serene	adjective	/səˈriːn/	thanh tịnh, trầm lặng, trong (trời), yên lặng (biển)
+shirk	verb	/ʃɜːrk/	trốn, lẩn tránh (việc, trách nhiệm)
+shrink	verb	/ʃrɪŋk/	thu nhỏ
+sinister	adjective	/ˈsɪnɪstər/	ác, nham hiểm, gở
+solitude	noun	/ˈsɑːlətuːd/	một mình, nơi tĩnh mịch
+sorcerer	noun	/ˈsɔːrsərər/	pháp sư
+spellbound	adjective	/ˈspelbaʊnd/	bị mê hoặc
+stagger	verb	/ˈstæɡər/	lảo đảo, loạng choạng
+stumble	verb	/ˈstʌmbl/	vấp
+stutter	verb	/ˈstʌtər/	nói lắp
+suave	adjective	/swɑːv/	ngọt ngào, khéo léo, tinh tế (đàn ông)
+sword	noun	/sɔːrd/	kiếm
+travesty	noun	/ˈtrævəsti/	nhại
+treacherous	adjective	/ˈtretʃərəs/	 phản bội, xảo trá, không thể tin cậy
+treason	noun	/ˈtriːzn/	tội tạo phản, làm phản
+utmost	adjective	/ˈʌtməʊst/	tột cùng, cực điểm, hết sức
+utopia	noun	/juːˈtəʊpiə/	điều không tưởng
+vicious	adjective	/ˈvɪʃəs/	xấu xa, ác, đồi bại
+villain	noun	/ˈvɪlən/	phản diện, kẻ xấu
+vindictive	adjective	/vɪnˈdɪktɪv/	thù oán
+volcano	noun	/vɑːlˈkeɪnəʊ/	núi lửa
+xenophobia	noun	/ˌzenəˈfəʊbiə/	bài ngoại
+whimsical	adjective	/ˈwɪmzɪkl/	bất thường, kỳ quái
+wicked	adjective	/ˈwɪkɪd/	xấu, tội lỗi, ác
+witch	noun	/wɪtʃ/	phù thủy
+wizard	noun	/ˈwɪzərd/	thầy phù thủy
+yawning	adjective	/ˈjɑː.nɪŋ/	(khác biệt) rất lớn, khó suy giảm
+yearning	noun	/ˈjɜːrnɪŋ/	khao khát, mong mỏi
+zenith	noun	/ˈziːnɪθ/	cực điểm, tột đỉnh
