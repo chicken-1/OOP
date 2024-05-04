@@ -44,7 +44,7 @@ public class SearchController {
     @FXML
     private void initialize() {
         dictionaryManagement = new DictionaryManagement();
-        dictionaryManagement.insertFromFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+        dictionaryManagement.insertFromFile("D:\\App\\Scene Builder\\OOP\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
         toolBar = new ToolBar();
 
         wordListView.setCellFactory(lv -> new ListCell<Word>() {
@@ -93,12 +93,17 @@ public class SearchController {
         // Load the defination for the selected word
         String word_target = selectedWord.getWord_target();
         Word word = dictionaryManagement.dictionaryLookup(word_target);
-        editDefinition.setHtmlText("<html><body><h1>" + word.getWord_target() + "</h1><p>" + word.getWord_explain() + "</p></body></html>");
-        editDefinition.setVisible(true);
-        /*definitionView.getEngine().loadContent("<html><head><link rel='stylesheet' type='text/css' href='style.css'></head><body>" +
-                "<div class='word-target'>" + word.getWord_target() + "</div>" +
-                "<div class='word-explain'>" + word.getWord_explain() + "</div>" +
-                "</body></html>");*/
+        /*editDefinition.setHtmlText("<html><body><h1>" + word.getWord_target() + "</h1><p>" + word.getWord_explain() + "</p></body></html>");
+        editDefinition.setVisible(true);*/
+        definitionView.getEngine().loadContent(
+                "<html><head><link rel='stylesheet' type='text/css' href='search.css'></head><body>" +
+                        "<div style='font-family: \"SVN-Gilroy Heavy\";" +
+                        "font-size: 40px; color: #1D93F3;" +
+                        "text-align: center; padding-top: 90px;'>" + word.getWord_target() + "</div>" +
+                        "<div style='font-family: \"SVN-Gilroy Medium\";" +
+                        "font-size: 20px; color: #000000;" +
+                        "text-align: center; padding-top: 20px;'>" + word.getWord_explain() + "</div>" +
+                        "</body></html>");
 
     }
 
@@ -123,7 +128,7 @@ public class SearchController {
         if (result.isPresent() && result.get() == ButtonType.OK) {
             // remove the word from dictionary
             dictionaryManagement.removeWord(selectedWord.getWord_target());
-            dictionaryManagement.exportToFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+            dictionaryManagement.exportToFile("D:\\App\\Scene Builder\\OOP\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
             wordList.remove(selectedWord);
             wordListView.getSelectionModel().clearSelection();
             editDefinition.setVisible(false);

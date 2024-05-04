@@ -89,7 +89,7 @@
 }
 /* Style cho hien thị ket qua tim kiem */
 .word-target {
-    -fx-font-family: "SVN-Gilroy Heavy";
+    -fx-font-family: "SVN-Gilroy Bold";
     -fx-font-size: 25px;
     -fx-text-fill: #1D93F3;
     text-align: center;
