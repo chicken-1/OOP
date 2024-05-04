@@ -13,7 +13,7 @@
 <?import javafx.scene.web.HTMLEditor?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@../../../Dictionary_3_5/src/main/style/search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchController">
+<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@/style/search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchController">
     <children>
         <AnchorPane layoutX="40.0" prefHeight="600.0" prefWidth="319.0" styleClass="panecolor1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -27,7 +27,7 @@
                                     <graphic>
                                         <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../Dictionary_3_5/src/main/image/Vector.png" />
+                                                <Image url="@/image/Vector.png" />
                                             </image>
                                         </ImageView>
                                     </graphic>
@@ -41,7 +41,7 @@
                                     <graphic>
                                         <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../Dictionary_3_5/src/main/image/GameTrang-01.png" />
+                                                <Image url="@/image/GameTrang-01.png" />
                                             </image>
                                         </ImageView>
                                     </graphic>
@@ -60,19 +60,19 @@
                     <children>
                         <WebView fx:id="definitionView" layoutX="-7.2" layoutY="-84.0" prefHeight="562.0" prefWidth="499.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-84.0" />
                         <HTMLEditor fx:id="editDefinition" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="-77.6" prefHeight="556.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <Button fx:id="speaker" layoutX="354.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleClickSpeaker" prefHeight="30.0" prefWidth="28.0" styleClass="buttonSpeaker" textFill="#8e9297">
+                        <Button fx:id="speaker" layoutX="353.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleClickSpeaker" prefHeight="30.0" prefWidth="28.0" styleClass="buttonSpeaker" textFill="#8e9297">
                             <font>
                                 <Font size="7.0" />
                             </font>
                             <graphic>
                                 <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../../Dictionary_3_5/src/main/image/LoaXanh-01.png" />
+                                        <Image url="@/image/LoaXanh-01.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Label fx:id="speaker2Language" layoutX="330.0" layoutY="26.0" styleClass="text-lang-second" text="US" textFill="#006abc">
+                        <Label fx:id="speaker2Language" layoutX="326.0" layoutY="26.0" styleClass="text-lang-second" text="US" textFill="#006abc">
                             <font>
                                 <Font name="SVN-GilroyHeavy" size="16.0" />
                             </font></Label>
@@ -81,26 +81,38 @@
                                 <Font name="SVN-GilroyBlack" size="10.0" />
                             </font>
                         </Label>
-                        <Button fx:id="updateButton" layoutX="390.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleUpdateButton" prefHeight="30.0" prefWidth="31.0" styleClass="buttonAdd" textFill="#235189">
+                        <Button fx:id="addButton" layoutX="390.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="30.0" prefWidth="31.0" styleClass="buttonAdd" textFill="#235189">
                             <font>
                                 <Font size="7.0" />
                             </font>
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../../Dictionary_3_5/src/main/image/4x/Add_button.png" />
+                                        <Image url="@/image/4x/Add_button.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="removeButton" layoutX="427.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleRemoveButton" prefHeight="30.0" prefWidth="28.0" styleClass="buttonRemove" textFill="#8e9297">
+                        <Button fx:id="removeButton" layoutX="464.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleRemoveButton" prefHeight="30.0" prefWidth="28.0" styleClass="buttonRemove" textFill="#8e9297">
                             <font>
                                 <Font size="7.0" />
                             </font>
                             <graphic>
                                 <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../../../Dictionary_3_5/src/main/image/4x/remove_button.png" />
+                                        <Image url="@/image/4x/remove_button.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="updatedButton" layoutX="427.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleUpdateButton" prefHeight="30.0" prefWidth="28.0" styleClass="buttonUpdate" textFill="#8e9297">
+                            <font>
+                                <Font size="7.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@/image/4x/update_button.png" />
                                     </image>
                                 </ImageView>
                             </graphic>

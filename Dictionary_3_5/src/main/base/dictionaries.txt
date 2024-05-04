@@ -1,7 +1,6 @@
 ablaze	rực cháy, bừng bừng, rừng rực
 aghast	hoảng hồn, kinh hoàng
 agitate	khích động, khuấy động 
-angle	góc
 animosity	tình trạng thù địch, hận thù
 appalling	kinh khủng
 atrocity	sự hung bạo, tàn ác, gớm ghiếc
@@ -97,3 +96,5 @@ wicked	xấu, tội lỗi, ác
 witch	phù thủy
 wizard	thầy phù thủy
 zenith	cực điểm, tột đỉnh
+angel	thiên thần, thiên sứ
+angle	góc
