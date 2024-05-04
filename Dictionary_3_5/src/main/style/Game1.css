@@ -2,14 +2,22 @@
 
 .buttonChon {
     -fx-background-color: #1D93F3;
-    -fx-text-fill: #ffffff;
+    -fx-text-fill: #000000;
     -fx-font-family: "SVN-Gilroy SemiBold";
     -fx-font-size: 12px;
     -fx-background-radius: 3 3 3 3; /* Bo tròn góc nền */
     -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
 }
 
-.buttoncKoChon {
+.button1 {
+    -fx-background-color: #ffffff;
+}
+
+.button2 {
+    -fx-background-color: #238FE7;
+}
+
+.buttonKoChon {
     -fx-background-color: #1D93F3;
     -fx-text-fill: #ffffff;
     -fx-font-family: "SVN-Gilroy SemiBold";
@@ -18,11 +26,24 @@
     -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
 }
 
-.buttonAdd {
-    -fx-background-color: DCF7E6;
-    -fx-border-color: #C2F2D3;
-    -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
+.gamekochon {
+    -fx-background-color: #238FE7;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "SVN-Gilroy Heavy";
+    -fx-font-size: 20px;
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
 }
+
+.chonGame {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #1D93F3;
+    -fx-font-family: "SVN-Gilroy Heavy";
+    -fx-font-size: 20px;
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
 
 .buttonRemove {
     -fx-background-color: #F7DCDC;

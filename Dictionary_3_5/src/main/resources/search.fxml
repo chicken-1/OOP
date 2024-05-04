@@ -13,7 +13,7 @@
 <?import javafx.scene.web.HTMLEditor?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@../../../Dictionary_3_5/src/main/style/search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchController">
+<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@../../../src/main/style/search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchController">
     <children>
         <AnchorPane layoutX="40.0" prefHeight="600.0" prefWidth="319.0" styleClass="panecolor1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
