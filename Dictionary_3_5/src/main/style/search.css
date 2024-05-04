@@ -30,6 +30,11 @@
     -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
 }
 
+.buttonUpdate {
+    -fx-background-color: #F3E8FF;
+    -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
+}
+
 .buttonSpeaker {
     -fx-background-color: #C2DEF2;
     -fx-border-color: #C0D5E2;

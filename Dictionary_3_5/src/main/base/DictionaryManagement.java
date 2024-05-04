@@ -52,6 +52,10 @@ public class DictionaryManagement {
         //scanner.close();
     }
 
+    public void addWord(Word word) {
+        this.dictionary.addWord(word);
+    }
+
     public void insertFromFile(String filename) {
         try {
             File file = new File(filename);
@@ -60,8 +64,12 @@ public class DictionaryManagement {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] words = line.split("\t");
-                Word word = new Word(words[0], words[1]);
-                this.dictionary.addWord(word);
+                if (words.length > 0) {
+                    Word word = new Word(words[0], words[1]);
+                    this.dictionary.addWord(word);
+                } else {
+                    System.out.println("Skipping empty line.");
+                }
             }
 
             scanner.close();
@@ -93,6 +101,10 @@ public class DictionaryManagement {
             return;
         }
         Word newWord = new Word(oldWordTarget, wordExplainUpdate);
+        this.dictionary.updateWord(wordToUpdate, newWord);
+    }
+
+    public void updatedWord(Word wordToUpdate, Word newWord) {
         this.dictionary.updateWord(wordToUpdate, newWord);
     }
 
@@ -130,5 +142,7 @@ public class DictionaryManagement {
         QuizGame game = new QuizGame();
         game.start();
     }
+
+
 
 }
