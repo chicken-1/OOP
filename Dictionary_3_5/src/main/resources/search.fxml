@@ -30,7 +30,7 @@
                         </VBox>
                         <VBox alignment="CENTER" layoutY="130.0" prefHeight="54.0" prefWidth="62.0" styleClass="buttoncKoChon">
                             <children>
-                                <Button fx:id="gameButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onMouseClicked="#handleClickGame" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: 000000;" styleClass="buttonCnang">
+                                <Button fx:id="gameButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleClickGame" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: 000000;" styleClass="buttonCnang">
                                     <graphic>
                                         <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                             <image>

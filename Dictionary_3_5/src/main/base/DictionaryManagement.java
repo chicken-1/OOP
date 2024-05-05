@@ -87,6 +87,7 @@ public class DictionaryManagement {
         }
 
     }
+
     public void updateWord(String oldWordTarget) {
         Scanner scanner = new Scanner(System.in);
         Word wordToUpdate = dictionary.searchWord(oldWordTarget);

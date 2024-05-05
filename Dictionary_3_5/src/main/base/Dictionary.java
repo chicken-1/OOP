@@ -33,7 +33,11 @@ public class Dictionary {
 
     public void updateWord(Word wordToUpdate, Word newWord) {
         int index = words.indexOf(wordToUpdate);
-        if (index != -1) 
+        if (newWord.getWord_type().equals("Updating")) newWord.setWord_type(wordToUpdate.getWord_type());
+        if (newWord.getWord_pronunciation().equals("Updating")) newWord.setWord_pronunciation(wordToUpdate.getWord_pronunciation());
+        if (newWord.getWord_explain().equals("Updating")) newWord.setWord_explain(wordToUpdate.getWord_explain());
+
+        if (index != -1)
             words.set(index, newWord);
         }
 

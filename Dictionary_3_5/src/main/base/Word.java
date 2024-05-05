@@ -7,16 +7,26 @@ public class Word {
     private String word_pronunciation;
 
     /**constructor. */
+    public  Word() {
+    }
     public Word(String word_target, String word_explain) {
         this.word_target = word_target;
         this.word_explain = word_explain;
+        this.word_type = "Updating";
+        this.word_pronunciation = "Updating";
     }
 
     public Word(String word_target, String word_type, String word_pronunciation, String word_explain) {
         this.word_target = word_target;
-        this.word_type = word_type;
-        this.word_pronunciation = word_pronunciation;
-        this.word_explain = word_explain;
+        if (word_type.isEmpty()) {
+            this.word_type = "Updating";
+        } else this.word_type = word_type;
+        if (word_pronunciation.isEmpty()) {
+            this.word_pronunciation = "Updating";
+        } else this.word_pronunciation = word_pronunciation;
+        if (word_explain.isEmpty()) {
+            this.word_explain = "Updating";
+        } else this.word_explain = word_explain;
     }
 
     /**getter and setter. */
