@@ -8,11 +8,13 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.web.HTMLEditor;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -21,10 +23,11 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-public class SearchController {
+public class SearchController extends GeneralController {
     private DictionaryManagement dictionaryManagement;
     private Word selectedWord;
     private final ObservableList<Word> wordList = FXCollections.observableArrayList();
+    private final String filepath = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
 
     @FXML
     private TextField searchField;
@@ -45,6 +48,9 @@ public class SearchController {
     private Button buttonSpeaker;
 
     @FXML
+    private Button gameButton;
+
+    @FXML
     private WebView definitionView;
 
     @FXML
@@ -53,7 +59,7 @@ public class SearchController {
     @FXML
     private void initialize() {
         dictionaryManagement = new DictionaryManagement();
-        dictionaryManagement.insertFromFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+        dictionaryManagement.insertFromFile(filepath);
 
         wordListView.setCellFactory(lv -> new ListCell<Word>() {
             @Override
@@ -91,29 +97,13 @@ public class SearchController {
         this.selectedWord = wordListView.getSelectionModel().getSelectedItem();
         if (selectedWord == null) {
             // Show an error message
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("No word selected");
-            alert.setContentText("Please select a word");
-            alert.showAndWait();
+            noneSelectedWord_alert();
             return;
         }
 
         // Load the defination for the selected word
         String word_target = selectedWord.getWord_target();
         Word word = dictionaryManagement.dictionaryLookup(word_target);
-
-        String wordType, pronunciation, word_explain;
-        if (word.getWord_type().isEmpty()){
-            wordType = "Updating";
-        } else wordType = word.getWord_type();
-        if (word.getWord_pronunciation().isEmpty()) {
-            pronunciation = "Updating";
-        } else pronunciation = word.getWord_pronunciation();
-        if (word.getWord_explain().isEmpty()) {
-            word_explain = "Updating";
-        } else word_explain = word.getWord_explain();
-
 
         // set up presentation of difinitionView
         definitionView.getEngine().loadContent(
@@ -183,7 +173,7 @@ public class SearchController {
         if (result.isPresent()) {
             Word newWord = result.get();
             dictionaryManagement.addWord(newWord);
-            dictionaryManagement.exportToFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+            dictionaryManagement.exportToFile(filepath);
             wordList.add(newWord);
             wordListView.getSelectionModel().select(newWord);
         }
@@ -191,6 +181,10 @@ public class SearchController {
 
     @FXML
     private void handleClickSpeaker(ActionEvent actionEvent) {
+        if (selectedWord == null) {
+            noneSelectedWord_alert();
+            return;
+        }
         Voice voice;
         System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
         voice = VoiceManager.getInstance().getVoice("kevin16");
@@ -211,15 +205,12 @@ public class SearchController {
         }
     }
 
-    public void showError(String s) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
-        alert.setContentText(s);
-        alert.showAndWait();
-    }
-
     @FXML
     private void handleRemoveButton(ActionEvent actionEvent) {
+        if (selectedWord == null) {
+            noneSelectedWord_alert();
+            return;
+        }
         // Confirm removal
         Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
         confirmAlert.setTitle("Confirm removal");
@@ -229,7 +220,7 @@ public class SearchController {
         if (result.isPresent() && result.get() == ButtonType.OK) {
             // remove the word from dictionary
             dictionaryManagement.removeWord(selectedWord.getWord_target());
-            dictionaryManagement.exportToFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+            dictionaryManagement.exportToFile(filepath);
             wordList.remove(selectedWord);
             wordListView.getSelectionModel().clearSelection();
             editDefinition.setVisible(false);
@@ -239,13 +230,21 @@ public class SearchController {
     @FXML
     private void handleUpdateButton(ActionEvent actionEvent) {
 
+        if (selectedWord == null) {
+            noneSelectedWord_alert();
+            return;
+        }
         Dialog<Word> dialog = new Dialog<>();
         dialog.setTitle("Update Word");
-        dialog.setHeaderText("Enter the new definition of " + selectedWord.getWord_target() + " : ");
+        dialog.setHeaderText("Updating " + selectedWord.getWord_target() + " : ");
         dialog.setHeight(292.00);
         dialog.setWidth(421.00);
 
         // Create definitionField
+        TextField wordTypeFeild = new TextField();
+        wordTypeFeild.setPromptText("Word type");
+        TextField pronunciationField = new TextField();
+        pronunciationField.setPromptText("Pronunciation");
         TextField definitionField = new TextField();
         definitionField.setPromptText("Definition");
 
@@ -253,8 +252,12 @@ public class SearchController {
         GridPane content = new GridPane();
         content.setHgap(10);
         content.setVgap(10);
-        content.add(new Label("Definition:"), 0, 0);
-        content.add(definitionField, 1, 0);
+        content.add(new Label("Word type:"), 0, 0);
+        content.add(wordTypeFeild, 1, 0);
+        content.add(new Label("Pronunciation:"), 0, 1);
+        content.add(pronunciationField, 1, 1);
+        content.add(new Label("Definition:"), 0, 2);
+        content.add(definitionField, 1, 2);
 
         // Set the dialog content
         dialog.getDialogPane().setContent(content);
@@ -267,7 +270,7 @@ public class SearchController {
         // Create result converter
         dialog.setResultConverter(buttonType -> {
             if (buttonType == okButtonType) {
-                return new Word(selectedWord.getWord_target(), definitionField.getText());
+                return new Word(selectedWord.getWord_target(), wordTypeFeild.getText().replace(" ", ""), pronunciationField.getText().replace(" ", ""), definitionField.getText());
             }
             return null;
         });
@@ -277,7 +280,7 @@ public class SearchController {
         if (result.isPresent()) {
             Word updatedWord = result.get();
             dictionaryManagement.updatedWord(selectedWord, updatedWord);
-            dictionaryManagement.exportToFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+            dictionaryManagement.exportToFile(filepath);
             wordList.set(wordListView.getSelectionModel().getSelectedIndex(), updatedWord);
             wordListView.getSelectionModel().select(updatedWord);
             handleClickListView();
@@ -285,13 +288,11 @@ public class SearchController {
         }
     }
 
-    @FXML
-    public void handleClickGame(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Game1.fxml"));
-        Parent root = loader.load();
-
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.show();
+    public void noneSelectedWord_alert() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText("No word selected");
+        alert.setContentText("Please select a word");
+        alert.showAndWait();
     }
 }

@@ -44,26 +44,40 @@
     -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
 }
 
-.dapan{
-    -fx-background-color: #ffffff;
-    -fx-background-radius: 5 5 5 5; /* Bo tròn góc nền */
+
+.buttonRemove {
+    -fx-background-color: #F7DCDC;
+    -fx-border-color: #F2D2D2;
+    -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
 }
 
-.dapAnSai{
-    -fx-background-color: #FC5D5D;
-    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
- }
-
-.dapAnDung{
-    -fx-background-color: #00df3f;
-    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+.buttonSpeaker {
+    -fx-background-color: #C2DEF2;
+    -fx-border-color: #C0D5E2;
+    -fx-background-radius: 3 3 3 3; /* Bo tròn góc nền */
+    -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
 }
+/*=====================================================*/
 
-.dapAnThuong{
-    -fx-border-color: #1D93F3;
-    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+/* Định nghĩa style cho các label */
+.titleTieude {
+    -fx-font-family: "SVN-Gilroy Heavy";
+    -fx-font-size: 25px;
+    -fx-text-fill: #000000;
+}
+/*chu chức năng*/
+.titleCnang {
+    -fx-font-family: "Inter-Medium";
+    -fx-font-size: 9px;
+    -fx-text-fill: #ffffff;
+}
+/* Định nghĩa style cho các text field */
+.bartimkiem {
+    -fx-text-fill: #000000;
     -fx-background-color: #ffffff;
-    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-color: #ffffff;
+    -fx-background-radius:  5 5 5 5; /* Bo tròn góc nền */
+    -fx-border-radius: 5 5 5 5; /* Bo tròn góc viền */
 }
 .panecolor1 {
     -fx-background-color: #1D93F3; /* Màu nền của pane */
@@ -71,3 +85,40 @@
 .pane-color {
     -fx-background-color: #ffffff; /* Màu nền của pane */
 }
+/* Định nghĩa style cho các list tìm kiếm*/
+.listtimkiem {
+    -fx-background-color: #ffffff; /* Màu nền của list view */
+    -fx-border-color: #C0C2C4; /* Màu viền của list view */
+    -fx-text-fill: #000000; /* Màu chữ của các mục trong list view */
+    -fx-font-family: "Inter-Medium"; /* Thay "Your Font Family" bằng tên font chữ bạn muốn sử dụng */
+    -fx-font-size: 14px;
+    -fx-background-radius: 5 5 5 5; /* Bo tròn góc nền */
+    -fx-border-radius: 5 5 5 5; /* Bo tròn góc viền */
+}
+
+/* Định nghĩa style cho các web view */
+.web-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+}
+
+/* Định nghĩa style cho các HTML editor */
+.html-editor .top-tool-bar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-opacity: 0;
+}
+/* Style cho hien thị ket qua tim kiem */
+.word-target {
+    -fx-font-family: "SVN-Gilroy Bold";
+    -fx-font-size: 25px;
+    -fx-text-fill: #1D93F3;
+    text-align: center;
+}
+
+.word-explain {
+    font-family: Arial;
+    color: green;
+    font-size: 10px;
+}
+/*=====================================================*/
