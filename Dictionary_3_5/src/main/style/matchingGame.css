@@ -1,0 +1,138 @@
+/* Định nghĩa style cho các nút */
+
+.objectEng {
+    -fx-background-color: #B5E1E8;
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.objectVN {
+    -fx-background-color: #FFC569;
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.answer {
+    -fx-background-color: #EAEDF6;
+    -fx-text-fill: #818BA0;
+    -fx-font-size: 14px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.submitBtn {
+    -fx-background-color: #1D93F3;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.submitBtn:hover {
+    -fx-background-color: #5FB2F5;
+    -fx-text-fill: #000000;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.submitBtn:pressed {
+    -fx-background-color: #1D93F3;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.exitBtn {
+    -fx-background-color: #D86859;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.exitBtn:hover {
+    -fx-background-color: #FA4D5E;
+    -fx-text-fill: #000000;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.exitBtn:pressed {
+    -fx-background-color: #D86859;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.buttonChon {
+    -fx-background-color: #1D93F3;
+    -fx-text-fill: #000000;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-font-size: 12px;
+    -fx-background-radius: 3 3 3 3; /* Bo tròn góc nền */
+    -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
+}
+
+.button1 {
+    -fx-background-color: #ffffff;
+}
+
+.button2 {
+    -fx-background-color: #238FE7;
+}
+
+.buttonKoChon {
+    -fx-background-color: #1D93F3;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-font-size: 12px;
+    -fx-background-radius: 3 3 3 3; /* Bo tròn góc nền */
+    -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
+}
+
+.gamekochon {
+    -fx-background-color: #238FE7;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "SVN-Gilroy Heavy";
+    -fx-font-size: 20px;
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.chonGame {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #1D93F3;
+    -fx-font-family: "SVN-Gilroy Heavy";
+    -fx-font-size: 20px;
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+/*=====================================================*/
+
+/* Định nghĩa style cho các text field */
+
+.panecolor1 {
+    -fx-background-color: #1D93F3; /* Màu nền của pane */
+}
+.pane-color {
+    -fx-background-color: #ffffff; /* Màu nền của pane */
+}
+
