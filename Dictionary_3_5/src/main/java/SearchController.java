@@ -53,7 +53,7 @@ public class SearchController {
     @FXML
     private void initialize() {
         dictionaryManagement = new DictionaryManagement();
-        dictionaryManagement.insertFromFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+        dictionaryManagement.insertFromFile("D:\\App\\Scene Builder\\OOP\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
 
         wordListView.setCellFactory(lv -> new ListCell<Word>() {
             @Override
@@ -117,14 +117,20 @@ public class SearchController {
 
         // set up presentation of difinitionView
         definitionView.getEngine().loadContent(
-                "<html><head><link rel='stylesheet' type='text/css' href='search.css'></head><body>" +
-                        "<div style='font-family: \"SVN-Gilroy Heavy\";" +
-                        "font-size: 40px; color: #1D93F3;" +
-                        "text-align: center; padding-top: 90px;'>" + word.getWord_target() + "</div>" +
-                        "<div style='font-family: \"SVN-Gilroy Medium\";" +
-                        "font-size: 20px; color: #000000;" +
-                        "text-align: center; padding-top: 20px;'>" + word.getWord_explain() + "</div>" +
-                        "</body></html>");
+        "<html><head><link rel='stylesheet' type='text/css' href='search.css'></head><body>" +
+        "<div style='font-family: \"SVN-Gilroy XBold\";" +
+        "font-size: 40px; color: #1D93F3;" +
+        "text-align: left; padding-top: 95px;'>" + word.getWord_target() + "</div>" +
+        "<div style='font-family: \"Dexa Round Med Ita\";" +
+        "font-size: 20px; color: #000000;" +
+        "text-align: left; padding-top: 50px;'>" + word.getWord_type() + "</div>" +
+        "<div style='font-family: \"Dexa Round Med\";" +
+        "font-size: 20px; color: #000000;" +
+        "text-align: left; padding-top: 20px;'>" + word.getWord_pronunciation() + "</div>" +
+        "<div style='font-family: \"DejaVu Serif\";" +
+        "font-size: 20px; color: #000000;" +
+        "text-align: left; padding-top: 20px;'>" + word.getWord_explain() + "</div>" +
+        "</body></html>");
     }
 
     @FXML
@@ -183,7 +189,7 @@ public class SearchController {
         if (result.isPresent()) {
             Word newWord = result.get();
             dictionaryManagement.addWord(newWord);
-            dictionaryManagement.exportToFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+            dictionaryManagement.exportToFile("D:\\App\\Scene Builder\\OOP\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
             wordList.add(newWord);
             wordListView.getSelectionModel().select(newWord);
         }
@@ -229,7 +235,7 @@ public class SearchController {
         if (result.isPresent() && result.get() == ButtonType.OK) {
             // remove the word from dictionary
             dictionaryManagement.removeWord(selectedWord.getWord_target());
-            dictionaryManagement.exportToFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+            dictionaryManagement.exportToFile("D:\\App\\Scene Builder\\OOP\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
             wordList.remove(selectedWord);
             wordListView.getSelectionModel().clearSelection();
             editDefinition.setVisible(false);
@@ -277,7 +283,7 @@ public class SearchController {
         if (result.isPresent()) {
             Word updatedWord = result.get();
             dictionaryManagement.updatedWord(selectedWord, updatedWord);
-            dictionaryManagement.exportToFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+            dictionaryManagement.exportToFile("D:\\App\\Scene Builder\\OOP\\Dictionary_3_5\\src\\main\\base\\dictionaries.txtt");
             wordList.set(wordListView.getSelectionModel().getSelectedIndex(), updatedWord);
             wordListView.getSelectionModel().select(updatedWord);
             handleClickListView();
