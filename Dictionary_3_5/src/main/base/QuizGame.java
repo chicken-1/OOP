@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class QuizGame extends Game {
-    private List<Question> questions = new ArrayList<>();
+    private List<Question> questionList = new ArrayList<>();
 
     public QuizGame() {
     }
@@ -16,15 +16,16 @@ public class QuizGame extends Game {
     public void start() {
         System.out.println("Welcome to the quiz game!");
         try {
-            loadQuestions();
+            questionList = loadQuestions();
             play();
         } catch (IOException e) {
             System.err.println("Error reading questions file: " + e.getMessage());
         }
     }
 
-    private void loadQuestions() throws IOException {
-        String questionsFile = "quizGame.txt";
+    public List<Question> loadQuestions() throws IOException {
+        List<Question> questions = new ArrayList<>();
+        String questionsFile = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\quizGame.txt";
         String line;
         Question question = null;
 
@@ -46,7 +47,7 @@ public class QuizGame extends Game {
                 }
             }
         }
-
+        return questions;
     }
 
     @Override
@@ -54,7 +55,7 @@ public class QuizGame extends Game {
 
         Scanner scanner = new Scanner(System.in);
         int score = 0;
-        for (Question question : questions) {
+        for (Question question : questionList) {
             System.out.println(question.getQuestion());
             for (String option : question.getOptions()) {
                 System.out.println(option);
@@ -65,49 +66,19 @@ public class QuizGame extends Game {
                 System.out.println("You didn't enter anything!");
                 continue;
             }
-            if (String.valueOf(answer.charAt(0)).equalsIgnoreCase(String.valueOf(question.getAnswer()))) {
+            if (String.valueOf(answer.charAt(0)).equalsIgnoreCase(String.valueOf(question.getAnswerChar()))) {
                 System.out.println("Correct!");
                 score++;
             } else {
-                System.out.println("Incorrect! The correct answer is: " + question.getAnswer());
+                System.out.println("Incorrect! The correct answer is: " + question.getAnswerChar());
             }
         }
         //scanner.close();
-        System.out.println("Your score: " + score + "/" + questions.size());
+        System.out.println("Your score: " + score + "/" + questionList.size());
     }
 
     public static void main(String[] args) {
         QuizGame g = new QuizGame();
         g.start();
-    }
-}
-
-class Question {
-    private String question;
-    private String answer;
-    private List<String> options = new ArrayList<>();
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
-    public char getAnswer() {
-        return answer.charAt(1);
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
-    }
-
-    public List<String> getOptions() {
-        return options;
-    }
-
-    public void addOption(String option, String text) {
-        options.add(option + " " + text);
     }
 }

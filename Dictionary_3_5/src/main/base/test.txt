@@ -26,14 +26,14 @@ dismay	noun	/dɪsˈmeɪ/	sự thất vọng, sự mất tinh thần
 drought	noun	/draʊt/	hạn hán
 dusk	noun	/dʌsk/	hoàng hôn
 ecstatic	adjective	/ɪkˈstætɪk/	ngây ngất, (sướng) mê ly
-escalate	verb	/ˈeskəleɪt/	leo thang
 embellish	verb	/ɪmˈbelɪʃ/	tô điểm, trang điểm, làm đẹp
 eminent	adjective	/ˈemɪnənt/	kiệt xuất, lỗi lạc, xuất chúng
-empire	noun	/ˈempaɪər/	vương quốc, đế chế
 emperor	noun	/ˈempərər/	hoàng đế
+empire	noun	/ˈempaɪər/	vương quốc, đế chế
 empress	noun	/ˈemprəs/	nữ vương
 encapsulate	verb	/ɪnˈkæpsjuleɪt/	tóm lược, gói gọn
 ephemeral	adjective	/ɪˈfemərəl/	sớm nở chóng tàn
+escalate	verb	/ˈeskəleɪt/	leo thang
 esoteric	adjective	/ˌesəˈterɪk/	bí truyền
 estrangement	noun	/ɪˈstreɪndʒmənt/	sự xa rời, sự ghẻ lạnh
 evil	adjective	/ˈiːvl/	độc ác
@@ -49,6 +49,8 @@ grandiose	adjective	/ˈɡrændiəʊs/	vĩ đại, hùng vĩ, phô trương
 greenhorn	noun	/ˈɡriːnhɔːrn/	lính mới, người chưa có kinh nghiệm
 grief	noun	/ɡriːf/	đau buồn (do thương tiếc ai đó đã chết)
 hegemony	noun	/hɪˈdʒeməni/	quyền lãnh đạo
+hello	Updating	Updating	chao
+hi	Updating	Updating	chào
 humanitarian	adjective	/hjuːˌmænɪˈteriən/	nhân đạo
 implicit	adjective	/ɪmˈplɪsɪt/	ngầm, ngấm ngầm
 incredulous	adjective	/ɪnˈkredʒələs/	hoài nghi, ngờ vực
@@ -62,8 +64,8 @@ king	noun	/kɪŋ/	nhà vua
 kismet	noun	/ˈkɪzmet/	duyên, định mệnh
 leisure	noun	/ˈliːʒər/	thời gian rảnh rỗi
 massacre	verb	/ˈmæsəkər/	thảm sát
-miscellaneous	adjective	/ˌmɪsəˈleɪniəs/	pha tạp, hỗn hợp
 meek	adjective	/miːk/	hiền lành, nhu mì, ngoan ngoãn
+miscellaneous	adjective	/ˌmɪsəˈleɪniəs/	pha tạp, hỗn hợp
 myriad	adjective	/ˈmɪriəd/	vô số
 nexus	noun	/ˈneksəs/	mối quan hệ, mối liên hệ
 numb	adjective	/nʌm/	tê liệt, tê dại, chết lặng đi (cảm xúc)
@@ -110,12 +112,11 @@ vicious	adjective	/ˈvɪʃəs/	xấu xa, ác, đồi bại
 villain	noun	/ˈvɪlən/	phản diện, kẻ xấu
 vindictive	adjective	/vɪnˈdɪktɪv/	thù oán
 volcano	noun	/vɑːlˈkeɪnəʊ/	núi lửa
-xenophobia	noun	/ˌzenəˈfəʊbiə/	bài ngoại
 whimsical	adjective	/ˈwɪmzɪkl/	bất thường, kỳ quái
 wicked	adjective	/ˈwɪkɪd/	xấu, tội lỗi, ác
 witch	noun	/wɪtʃ/	phù thủy
 wizard	noun	/ˈwɪzərd/	thầy phù thủy
+xenophobia	noun	/ˌzenəˈfəʊbiə/	bài ngoại
 yawning	adjective	/ˈjɑː.nɪŋ/	(khác biệt) rất lớn, khó suy giảm
 yearning	noun	/ˈjɜːrnɪŋ/	khao khát, mong mỏi
 zenith	noun	/ˈziːnɪθ/	cực điểm, tột đỉnh
-hi	Updating	Updating	chào

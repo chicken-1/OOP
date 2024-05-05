@@ -3,13 +3,14 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.web.HTMLEditor?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@/style/Game1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameController">
+<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@/style/Game1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game1Controller">
     <children>
         <AnchorPane layoutX="40.0" prefHeight="600.0" prefWidth="319.0" styleClass="panecolor1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -49,7 +50,7 @@
                <children>
                   <VBox alignment="CENTER" layoutX="7.0" layoutY="25.0" prefHeight="242.0" prefWidth="226.0" styleClass="chonGame" AnchorPane.topAnchor="35.0">
                      <children>
-                        <Button fx:id="multiChoice_game" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#handleClickMulti_game" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
+                        <Button fx:id="multiChoiceGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
                            <graphic>
                               <ImageView fitHeight="182.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -58,7 +59,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch2" alignment="CENTER" onMouseClicked="#handleClickMulti_game" prefHeight="46.0" prefWidth="204.0" text="Chọn đáp án đúng" textFill="#1d93f3">
+                        <Label fx:id="titleSearch2" alignment="CENTER" prefHeight="46.0" prefWidth="204.0" text="Chọn đáp án đúng" textFill="#1d93f3">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding></Label>
@@ -66,16 +67,16 @@
                   </VBox>
                   <VBox alignment="CENTER" layoutX="7.0" layoutY="288.0" prefHeight="242.0" prefWidth="226.0" styleClass="gamekochon" AnchorPane.bottomAnchor="35.0">
                      <children>
-                        <Button fx:id="matching_game" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#handleClickMatching_game" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
+                        <Button fx:id="matchingGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMatchingGame" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
                            <graphic>
-                              <ImageView fitHeight="182.0" fitWidth="182.0" onMouseClicked="#handleClickMatching_game" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="182.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@/image/4x/gamenoitu.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch21" alignment="CENTER" onMouseClicked="#handleClickMatching_game" prefHeight="120.0" prefWidth="204.0" text="Nối từ" textFill="WHITE">
+                        <Label fx:id="titleSearch21" alignment="CENTER" prefHeight="120.0" prefWidth="204.0" text="Nối từ" textFill="WHITE">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding></Label>
@@ -85,13 +86,33 @@
             </AnchorPane>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="320.8" prefHeight="573.0" prefWidth="501.0" style="-fx-background-radius: 10; -fx-background-color: ffffff;" styleClass="first-color" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+        <AnchorPane fx:id="anchorPaneGame" layoutX="320.8" prefHeight="573.0" prefWidth="501.0" style="-fx-background-radius: 10; -fx-background-color: ffffff;" styleClass="first-color" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
             <children>
-                <AnchorPane layoutX="10.0" layoutY="87.0" prefHeight="468.0" prefWidth="472.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="87.0">
+                <AnchorPane layoutX="10.0" layoutY="126.4" prefHeight="439.0" prefWidth="485.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="126.0">
                     <children>
-                        <HTMLEditor fx:id="editDefinition" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="-77.6" prefHeight="556.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="answer1" layoutX="142.0" layoutY="62.0" mnemonicParsing="false" onAction="#handleClickAnswer" prefHeight="54.0" prefWidth="200.0" styleClass="dapAnThuong" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="62.0" />
+                        <Button fx:id="answer2" layoutX="142.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleClickAnswer" prefHeight="54.0" prefWidth="200.0" styleClass="dapAnThuong" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="138.0" />
+                        <Button fx:id="answer4" layoutX="142.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleClickAnswer" prefHeight="54.0" prefWidth="200.0" styleClass="dapAnThuong" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="290.0" />
+                        <Button fx:id="answer3" layoutX="143.0" layoutY="215.0" mnemonicParsing="false" onAction="#handleClickAnswer" prefHeight="54.0" prefWidth="200.0" styleClass="dapAnThuong" AnchorPane.leftAnchor="142.0" AnchorPane.topAnchor="215.0" />
+                  <Button fx:id="nextQuestionButton" layoutX="331.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleClickNext" prefHeight="38.0" prefWidth="118.0" text="Câu hỏi tiếp theo" />
+                  <Label fx:id="correctAnswer" layoutX="217.0" layoutY="14.0" prefHeight="46.0" prefWidth="198.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="correctAnsTittle" layoutX="109.0" layoutY="14.0" prefHeight="46.0" prefWidth="101.0" text="Đáp án đúng: ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="exitButton" layoutX="34.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleClickExit" prefHeight="38.0" prefWidth="107.0" text="Thoát" />
                     </children>
                 </AnchorPane>
+            <TextArea fx:id="questionArea" layoutX="39.0" layoutY="54.0" prefHeight="76.0" prefWidth="426.0" promptText="Question" scrollTop="1.0" styleClass="questionArea">
+               <font>
+                  <Font name="SVN-GilroyXBoldItalic" size="20.0" />
+               </font>
+            </TextArea>
             </children>
         </AnchorPane>
     </children>

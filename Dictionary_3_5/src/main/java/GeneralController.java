@@ -1,14 +1,19 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class GeneralController {
     @FXML
@@ -25,7 +30,7 @@ public class GeneralController {
     public void handleClickGame(ActionEvent actionEvent) throws IOException {
         //**** change by pane
         // load the game pane
-        Parent gamePane = FXMLLoader.load(getClass().getResource("Game1.fxml"));
+        Parent gamePane = FXMLLoader.load(getClass().getResource("gameGeneral.fxml"));
 
         // get the root layout (pane stack)
         StackPane root = (StackPane) gameButton.getScene().getRoot();
@@ -59,3 +64,6 @@ public class GeneralController {
         root.getChildren().add(searchPane);
     }
 }
+
+
+
