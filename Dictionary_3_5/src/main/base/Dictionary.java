@@ -52,7 +52,7 @@ public class Dictionary {
     public List<Word> searchWords(String searchKeyword) {
         List<Word> searchResults = new ArrayList<Word>();
         for (Word word : words) {
-            if (word.getWord_target().contains(searchKeyword)) {
+            if (word.getWord_target().startsWith(searchKeyword)) {
                 searchResults.add(word);
             }
         }

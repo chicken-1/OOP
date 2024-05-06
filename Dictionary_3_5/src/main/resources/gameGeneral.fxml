@@ -49,7 +49,7 @@
                     <children>
                         <VBox alignment="CENTER" layoutX="7.0" layoutY="25.0" prefHeight="242.0" prefWidth="226.0" styleClass="chonGame" AnchorPane.topAnchor="35.0">
                             <children>
-                                <Button fx:id="multiChoice_game" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
+                                <Button fx:id="multiChoiceGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
                                     <graphic>
                                         <ImageView fitHeight="182.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
                                             <image>

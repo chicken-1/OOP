@@ -59,7 +59,7 @@ public class SearchController extends GeneralController {
     @FXML
     private void initialize() {
         dictionaryManagement = new DictionaryManagement();
-        dictionaryManagement.insertFromFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
+        dictionaryManagement.insertFromFile(filepath);
 
         wordListView.setCellFactory(lv -> new ListCell<Word>() {
             @Override
@@ -78,18 +78,24 @@ public class SearchController extends GeneralController {
     private void searchFieldAction(KeyEvent event) {
         String search = searchField.getText();
         search = search.toLowerCase();
-        List<Word> words = dictionaryManagement.dictionarySearcher(search);
-        if (words.isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Error");
-            alert.setHeaderText(null);
-            alert.setContentText("No words found");
-            alert.showAndWait();
-            return;
+        if (!search.equals("")) {
+            List<Word> words = dictionaryManagement.dictionarySearcher(search);
+            if (words.isEmpty()) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText("No words found");
+                alert.showAndWait();
+                return;
+            }
+            wordList.clear();
+            wordList.addAll(words);
+            wordListView.setItems(wordList);
         }
-        wordList.clear();
-        wordList.addAll(words);
-        wordListView.setItems(wordList);
+        if (search.equals("")) {
+            definitionView.getEngine().load(null);
+            wordList.clear();
+        }
     }
 
     @FXML
@@ -105,67 +111,48 @@ public class SearchController extends GeneralController {
         String word_target = selectedWord.getWord_target();
         Word word = dictionaryManagement.dictionaryLookup(word_target);
 
-        String wordType, pronunciation, word_explain;
-        if (word.getWord_type().isEmpty()){
-            wordType = "Updating";
-        } else wordType = word.getWord_type();
-        if (word.getWord_pronunciation().isEmpty()) {
-            pronunciation = "Updating";
-        } else pronunciation = word.getWord_pronunciation();
-        if (word.getWord_explain().isEmpty()) {
-            word_explain = "Updating";
-        } else word_explain = word.getWord_explain();
-
-
         // set up presentation of difinitionView
         definitionView.getEngine().loadContent(
-        "<html><head><link rel='stylesheet' type='text/css' href='search.css'></head><body>" +
-        "<div style='font-family: \"SVN-Gilroy XBold\";" +
-        "font-size: 40px; color: #1D93F3;" +
-        "text-align: left; padding-top: 95px;'>" + word.getWord_target() + "</div>" +
-        "<div style='font-family: \"Dexa Round Med Ita\";" +
-        "font-size: 20px; color: #000000;" +
-        "text-align: left; padding-top: 50px;'>" + word.getWord_type() + "</div>" +
-        "<div style='font-family: \"Dexa Round Med\";" +
-        "font-size: 20px; color: #000000;" +
-        "text-align: left; padding-top: 20px;'>" + word.getWord_pronunciation() + "</div>" +
-        "<div style='font-family: \"DejaVu Serif\";" +
-        "font-size: 20px; color: #000000;" +
-        "text-align: left; padding-top: 20px;'>" + word.getWord_explain() + "</div>" +
-        "</body></html>");
+                "<html><head><link rel='stylesheet' type='text/css' href='search.css'></head><body>" +
+                        "<div style='font-family: \"SVN-Gilroy Heavy\";" +
+                        "font-size: 40px; color: #1D93F3;" +
+                        "text-align: center; padding-top: 90px;'>" + word.getWord_target() + "</div>" +
+                        "<div style='font-family: \"SVN-Gilroy Medium\";" +
+                        "font-size: 20px; color: #000000;" +
+                        "text-align: center; padding-top: 20px;'>" + word.getWord_explain() + "</div>" +
+                        "</body></html>");
     }
 
     @FXML
     private void handleAddButton(ActionEvent actionEvent) {
         // Create a new dialog for adding a word
         Dialog<Word> dialog = new Dialog<>();
-        dialog.setTitle("Add Word");
-        dialog.setHeaderText("Enter the new word and its definition:");
+        dialog.setTitle("Thêm từ");
         dialog.setHeight(292.00);
         dialog.setWidth(421.00);
 
         // Create the word and definition fields
         TextField wordField = new TextField();
-        wordField.setPromptText("Word");
+        wordField.setPromptText("Từ:");
         TextField wordTypeFeild = new TextField();
-        wordTypeFeild.setPromptText("Word type");
+        wordTypeFeild.setPromptText("Loại từ:");
         TextField pronunciationField = new TextField();
-        pronunciationField.setPromptText("Pronunciation");
+        pronunciationField.setPromptText("Phát âm:");
         TextField definitionField = new TextField();
-        definitionField.setPromptText("Definition");
+        definitionField.setPromptText("Nghĩa:");
 
 
         // Create the dialog content
         GridPane content = new GridPane();
         content.setHgap(10);
         content.setVgap(10);
-        content.add(new Label("Word:"), 0, 0);
+        content.add(new Label("Từ:"), 0, 0);
         content.add(wordField, 1, 0);
-        content.add(new Label("Word type:"), 0, 1);
+        content.add(new Label("Loại từ:"), 0, 1);
         content.add(wordTypeFeild, 1, 1);
-        content.add(new Label("Pronunciation:"), 0, 2);
+        content.add(new Label("Phát âm:"), 0, 2);
         content.add(pronunciationField, 1, 2);
-        content.add(new Label("Definition:"), 0, 3);
+        content.add(new Label("Nghĩa:"), 0, 3);
         content.add(definitionField, 1, 3);
 
 
@@ -174,7 +161,7 @@ public class SearchController extends GeneralController {
 
         // Create the OK and Cancel buttons
         ButtonType okButtonType = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
-        ButtonType cancelButtonType = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+        ButtonType cancelButtonType = new ButtonType("Hủy", ButtonBar.ButtonData.CANCEL_CLOSE);
         dialog.getDialogPane().getButtonTypes().addAll(okButtonType, cancelButtonType);
 
         // Create the result converter
@@ -191,8 +178,8 @@ public class SearchController extends GeneralController {
         if (result.isPresent()) {
             Word newWord = result.get();
             dictionaryManagement.addWord(newWord);
-            dictionaryManagement.exportToFile("D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt");
-            wordList.add(newWord);
+            dictionaryManagement.exportToFile(filepath);
+            //wordList.add(newWord);
             wordListView.getSelectionModel().select(newWord);
         }
     }
@@ -231,9 +218,9 @@ public class SearchController extends GeneralController {
         }
         // Confirm removal
         Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
-        confirmAlert.setTitle("Confirm removal");
-        confirmAlert.setHeaderText("Remove word: " + selectedWord.getWord_target());
-        confirmAlert.setContentText("Are you sure you want to remove this word?");
+        confirmAlert.setTitle("Xóa");
+        confirmAlert.setHeaderText("Xóa từ: " + selectedWord.getWord_target());
+        confirmAlert.setContentText("Bạn có muốn xóa từ này khỏi từ điển cá nhân của bạn?");
         Optional<ButtonType> result = confirmAlert.showAndWait();
         if (result.isPresent() && result.get() == ButtonType.OK) {
             // remove the word from dictionary
@@ -253,28 +240,28 @@ public class SearchController extends GeneralController {
             return;
         }
         Dialog<Word> dialog = new Dialog<>();
-        dialog.setTitle("Update Word");
-        dialog.setHeaderText("Updating " + selectedWord.getWord_target() + " : ");
+        dialog.setTitle("Cập nhật");
+        dialog.setHeaderText("Cập nhật từ" + selectedWord.getWord_target() + " : ");
         dialog.setHeight(292.00);
         dialog.setWidth(421.00);
 
         // Create definitionField
         TextField wordTypeFeild = new TextField();
-        wordTypeFeild.setPromptText("Word type");
+        wordTypeFeild.setPromptText("Loại từ:");
         TextField pronunciationField = new TextField();
-        pronunciationField.setPromptText("Pronunciation");
+        pronunciationField.setPromptText("Phát âm:");
         TextField definitionField = new TextField();
-        definitionField.setPromptText("Definition");
+        definitionField.setPromptText("Nghĩa:");
 
         // Create the dialog content
         GridPane content = new GridPane();
         content.setHgap(10);
         content.setVgap(10);
-        content.add(new Label("Word type:"), 0, 0);
+        content.add(new Label("Loại từ:"), 0, 0);
         content.add(wordTypeFeild, 1, 0);
-        content.add(new Label("Pronunciation:"), 0, 1);
+        content.add(new Label("Phát âm:"), 0, 1);
         content.add(pronunciationField, 1, 1);
-        content.add(new Label("Definition:"), 0, 2);
+        content.add(new Label("Nghĩa:"), 0, 2);
         content.add(definitionField, 1, 2);
 
         // Set the dialog content
@@ -282,7 +269,7 @@ public class SearchController extends GeneralController {
 
         // Create OK and Cancel button
         ButtonType okButtonType = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
-        ButtonType cancelButtonType = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+        ButtonType cancelButtonType = new ButtonType("Hủy", ButtonBar.ButtonData.CANCEL_CLOSE);
         dialog.getDialogPane().getButtonTypes().addAll(okButtonType, cancelButtonType);
 
         // Create result converter
@@ -308,9 +295,9 @@ public class SearchController extends GeneralController {
 
     public void noneSelectedWord_alert() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
-        alert.setHeaderText("No word selected");
-        alert.setContentText("Please select a word");
+        alert.setTitle("Lỗi");
+        alert.setHeaderText("Chưa có từ nào được chọn.");
+        alert.setContentText("Hãy chọn một từ để thực hiện thao tác này.");
         alert.showAndWait();
     }
 }
