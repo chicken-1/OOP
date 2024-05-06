@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@style/GameGeneral.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GeneralController">
+<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@style/GameGeneral.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameController">
     <children>
         <AnchorPane layoutX="40.0" prefHeight="600.0" prefWidth="319.0" styleClass="panecolor1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -49,7 +49,7 @@
                     <children>
                         <VBox alignment="CENTER" layoutX="7.0" layoutY="25.0" prefHeight="242.0" prefWidth="226.0" styleClass="chonGame" AnchorPane.topAnchor="35.0">
                             <children>
-                                <Button fx:id="multiChoiceGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
+                                <Button fx:id="multiChoiceGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
                                     <graphic>
                                         <ImageView fitHeight="182.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -66,7 +66,7 @@
                         </VBox>
                         <VBox alignment="CENTER" layoutX="7.0" layoutY="288.0" prefHeight="242.0" prefWidth="226.0" styleClass="gamekochon" AnchorPane.bottomAnchor="35.0">
                             <children>
-                                <Button fx:id="matching_game" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMatchingGame" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
+                                <Button fx:id="matchingGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMatchingGame" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
                                     <graphic>
                                         <ImageView fitHeight="182.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
                                             <image>

@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.web.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+<?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@/style/search.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchController">
+<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@/style/search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchController">
     <children>
         <AnchorPane layoutX="40.0" prefHeight="600.0" prefWidth="319.0" styleClass="panecolor1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -51,18 +58,9 @@
                 <HBox layoutX="25.0" layoutY="17.0" prefHeight="40.0" prefWidth="390.0" />
                 <AnchorPane layoutX="10.0" layoutY="87.0" prefHeight="468.0" prefWidth="472.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="87.0">
                     <children>
-                        <WebView fx:id="definitionView" layoutX="59.0" layoutY="-84.0" prefHeight="563.0" prefWidth="390.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="-84.0" />
+                        <WebView fx:id="definitionView" layoutX="-7.2" layoutY="-84.0" prefHeight="562.0" prefWidth="499.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-84.0" />
                         <HTMLEditor fx:id="editDefinition" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="-77.6" prefHeight="556.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <Label fx:id="headText" layoutX="58.0" layoutY="-56.0" prefHeight="40.0" prefWidth="390.0" styleClass="titleTieude" text="Nghĩa của từ" textAlignment="CENTER" textFill="#902929" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="37.60000000000002">
-                            <font>
-                                <Font name="Oswald Light" size="10.0" />
-                            </font>
-                        </Label>
-                        <Label fx:id="speaker2Language" layoutX="319.0" layoutY="39.0" styleClass="text-lang-second" text="US" textFill="#006abc" AnchorPane.topAnchor="39.0">
-                            <font>
-                                <Font name="SVN-GilroyHeavy" size="16.0" />
-                            </font></Label>
-                        <Button fx:id="speaker" layoutX="343.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleClickSpeaker" prefHeight="30.0" prefWidth="28.0" styleClass="buttonSpeaker" textFill="#8e9297" AnchorPane.topAnchor="34.0">
+                        <Button fx:id="speaker" layoutX="353.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleClickSpeaker" prefHeight="30.0" prefWidth="28.0" styleClass="buttonSpeaker" textFill="#8e9297">
                             <font>
                                 <Font size="7.0" />
                             </font>
@@ -74,7 +72,16 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="addButton" layoutX="380.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="30.0" prefWidth="31.0" styleClass="buttonAdd" textFill="#235189" AnchorPane.topAnchor="34.0">
+                        <Label fx:id="speaker2Language" layoutX="326.0" layoutY="26.0" styleClass="text-lang-second" text="US" textFill="#006abc">
+                            <font>
+                                <Font name="SVN-GilroyHeavy" size="16.0" />
+                            </font></Label>
+                        <Label fx:id="headText" layoutX="26.0" layoutY="-57.0" prefHeight="40.0" prefWidth="390.0" styleClass="titleTieude" text="Nghĩa của từ" textFill="#902929">
+                            <font>
+                                <Font name="SVN-GilroyBlack" size="10.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="addButton" layoutX="390.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="30.0" prefWidth="31.0" styleClass="buttonAdd" textFill="#235189">
                             <font>
                                 <Font size="7.0" />
                             </font>
@@ -86,7 +93,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="removeButton" layoutX="454.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleRemoveButton" prefHeight="30.0" prefWidth="28.0" styleClass="buttonRemove" textFill="#8e9297" AnchorPane.rightAnchor="0.8000000000000007" AnchorPane.topAnchor="34.0">
+                        <Button fx:id="removeButton" layoutX="464.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleRemoveButton" prefHeight="30.0" prefWidth="28.0" styleClass="buttonRemove" textFill="#8e9297">
                             <font>
                                 <Font size="7.0" />
                             </font>
@@ -98,7 +105,7 @@
                                 </ImageView>
                             </graphic>
                         </Button>
-                        <Button fx:id="updatedButton" layoutX="417.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleUpdateButton" prefHeight="30.0" prefWidth="28.0" styleClass="buttonUpdate" textFill="#8e9297" AnchorPane.topAnchor="34.0">
+                        <Button fx:id="updatedButton" layoutX="427.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleUpdateButton" prefHeight="30.0" prefWidth="28.0" styleClass="buttonUpdate" textFill="#8e9297">
                             <font>
                                 <Font size="7.0" />
                             </font>

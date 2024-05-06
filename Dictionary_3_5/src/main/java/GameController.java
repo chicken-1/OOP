@@ -33,6 +33,15 @@ public class GameController extends GeneralController {
     }
 
     public void handleClickMatchingGame(ActionEvent actionEvent) throws IOException {
+        // load the game pane
+        Parent multiGamePane = FXMLLoader.load(getClass().getResource("matchGame.fxml"));
+
+        // get the root layout (pane stack)
+        StackPane root = (StackPane) multiChoiceGame.getScene().getRoot();
+
+        // remove the search pane from the root layout and add the game pane
+        root.getChildren().remove(0);
+        root.getChildren().add(multiGamePane);
 
     }
 }

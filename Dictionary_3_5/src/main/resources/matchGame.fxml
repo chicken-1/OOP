@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@../style/matchingGame.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameController">
+<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@style/matchingGame.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MatchingGameController">
     <children>
         <AnchorPane layoutX="40.0" prefHeight="600.0" prefWidth="319.0" styleClass="panecolor1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -20,11 +20,11 @@
                     <children>
                         <VBox alignment="CENTER" layoutY="64.0" prefHeight="54.0" prefWidth="62.0" styleClass="buttoncKoChon">
                             <children>
-                                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="buttonKoChon" stylesheets="@../style/matchingGame.css">
+                                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="buttonKoChon" stylesheets="@style/matchingGame.css">
                                     <graphic>
                                         <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../src/main/image/Vector.png" />
+                                                <Image url="@/image/Vector.png" />
                                             </image>
                                         </ImageView>
                                     </graphic>
@@ -32,13 +32,13 @@
                                 <Label fx:id="titleSearch" alignment="CENTER" prefHeight="22.0" prefWidth="64.0" text="Tìm kiếm" textFill="WHITE" />
                             </children>
                         </VBox>
-                        <VBox alignment="CENTER" layoutY="130.0" prefHeight="54.0" prefWidth="62.0" styleClass="buttonChon" stylesheets="@../style/matchingGame.css">
+                        <VBox alignment="CENTER" layoutY="130.0" prefHeight="54.0" prefWidth="62.0" styleClass="buttonChon" stylesheets="@style/matchingGame.css">
                             <children>
                                 <Button alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="button1" textFill="WHITE">
                                     <graphic>
                                         <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../src/main/image/GameDen-01.png" />
+                                                <Image url="@/image/GameDen-01.png" />
                                             </image>
                                         </ImageView>
                                     </graphic>
@@ -52,16 +52,16 @@
                     <children>
                         <VBox alignment="CENTER" layoutX="7.0" layoutY="25.0" prefHeight="242.0" prefWidth="226.0" styleClass="gamekochon" AnchorPane.topAnchor="35.0">
                             <children>
-                                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
+                                <Button fx:id="multiChoiceGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
                                     <graphic>
-                                        <ImageView fx:id="multiChoice_game" fitHeight="182.0" fitWidth="182.0" onMouseClicked="#handleClickMulti_game" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fitHeight="182.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../src/main/image/4x/gamchondapan.png" />
+                                                <Image url="@/image/4x/gamchondapan.png" />
                                             </image>
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Label fx:id="titleSearch2" alignment="CENTER" onMouseClicked="#handleClickMulti_game" prefHeight="46.0" prefWidth="204.0" text="Chọn đáp án đúng" textFill="WHITE">
+                                <Label fx:id="titleSearch2" alignment="CENTER" prefHeight="46.0" prefWidth="204.0" text="Chọn đáp án đúng" textFill="WHITE">
                                     <padding>
                                         <Insets bottom="10.0" />
                                     </padding></Label>
@@ -69,16 +69,16 @@
                         </VBox>
                         <VBox alignment="CENTER" layoutX="7.0" layoutY="288.0" prefHeight="242.0" prefWidth="226.0" styleClass="chonGame" AnchorPane.bottomAnchor="35.0">
                             <children>
-                                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
+                                <Button fx:id="matchingGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMatchingGame" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
                                     <graphic>
-                                        <ImageView fx:id="matching_ame" fitHeight="182.0" fitWidth="182.0" onMouseClicked="#handleClickMatching_game" pickOnBounds="true" preserveRatio="true">
+                                        <ImageView fitHeight="182.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../src/main/image/4x/gamenoitu.png" />
+                                                <Image url="@/image/4x/gamenoitu.png" />
                                             </image>
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Label fx:id="titleSearch21" alignment="CENTER" onMouseClicked="#handleClickMatching_game" prefHeight="120.0" prefWidth="204.0" text="Nối từ" textFill="#1d93f3">
+                                <Label fx:id="titleSearch21" alignment="CENTER" prefHeight="120.0" prefWidth="204.0" text="Nối từ" textFill="#1d93f3">
                                     <padding>
                                         <Insets bottom="10.0" />
                                     </padding></Label>
@@ -195,12 +195,12 @@
                         </TextField>
                      </children>
                   </HBox>
-                  <Button fx:id="submitBtn" layoutX="350.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickSubmit" prefHeight="35.0" prefWidth="80.0" styleClass="submitBtn" stylesheets="@../style/matchingGame.css" text="Nộp">
+                        <Button fx:id="submitBtn" layoutX="350.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickSubmit" prefHeight="35.0" prefWidth="80.0" styleClass="submitBtn" stylesheets="@../style/matchingGame.css" text="Nộp">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="exitBtn" layoutX="51.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickExit" prefHeight="35.0" prefWidth="80.0" styleClass="exitBtn" stylesheets="@../style/matchingGame.css" text="Thoát">
+                        <Button fx:id="exitBtn" layoutX="51.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickExit" prefHeight="35.0" prefWidth="80.0" styleClass="exitBtn" stylesheets="@style/matchingGame.css" text="Thoát">
                      <font>
                         <Font size="18.0" />
                      </font>
