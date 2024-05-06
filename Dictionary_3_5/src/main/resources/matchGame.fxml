@@ -195,12 +195,12 @@
                         </TextField>
                      </children>
                   </HBox>
-                  <Button fx:id="submitBtn" layoutX="350.0" layoutY="496.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" styleClass="submitBtn" stylesheets="@../style/matchingGame.css" text="Nộp">
+                  <Button fx:id="submitBtn" layoutX="350.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickSubmit" prefHeight="35.0" prefWidth="80.0" styleClass="submitBtn" stylesheets="@../style/matchingGame.css" text="Nộp">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="exitBtn" layoutX="51.0" layoutY="496.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" styleClass="exitBtn" stylesheets="@../style/matchingGame.css" text="Thoát">
+                  <Button fx:id="exitBtn" layoutX="51.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickExit" prefHeight="35.0" prefWidth="80.0" styleClass="exitBtn" stylesheets="@../style/matchingGame.css" text="Thoát">
                      <font>
                         <Font size="18.0" />
                      </font>
