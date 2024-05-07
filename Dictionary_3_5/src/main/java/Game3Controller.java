@@ -23,7 +23,9 @@ import java.util.Random;
 public class Game3Controller extends GameController {
 
     @FXML
-    private ImageView result;
+    private ImageView correct;
+    @FXML
+    private ImageView incorrect;
     @FXML
     private Label correctAnswer;
     @FXML
@@ -38,8 +40,6 @@ public class Game3Controller extends GameController {
     private Button nextBtn;
 
     private String word;
-    private String correctImage = "file:///D:/Projects_workspace/JAVAFX/Dictionary_3_5/src/main/image/correct.png";
-    private String incorrectImage = "file:///D:/Projects_workspace/JAVAFX/Dictionary_3_5/src/main/image/incorrect.png";
 
     public void initialize() {
         DictionaryManagement dictionaryManagement = new DictionaryManagement();
@@ -49,7 +49,9 @@ public class Game3Controller extends GameController {
         word = dictionaryManagement.dictionary.getWord(randomNum).getWord_target();
         correctAnsTittle.setVisible(false);
         correctAnswer.setVisible(false);
-        result.setVisible(false);
+        correct.setVisible(false);
+        incorrect.setVisible(false);
+        answer.setText("");
         System.out.println(word);
     }
 
@@ -93,11 +95,9 @@ public class Game3Controller extends GameController {
             correctAnsTittle.setVisible(true);
             correctAnswer.setVisible(true);
             correctAnswer.setText(word);
-            Image image1 = new Image(incorrectImage);
-            result.setImage(image1);
+            incorrect.setVisible(true);
         } else {
-            Image image2 = new Image(correctImage);
-            result.setImage(image2);
+            correct.setVisible(true);
         }
     }
 

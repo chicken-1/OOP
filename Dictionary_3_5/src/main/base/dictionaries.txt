@@ -118,3 +118,7 @@ wizard	noun	/ˈwɪzərd/	thầy phù thủy
 yawning	adjective	/ˈjɑː.nɪŋ/	rất lớn (khác biệt), khó suy giảm
 yearning	noun	/ˈjɜːrnɪŋ/	khao khát, mong mỏi
 zenith	noun	/ˈziːnɪθ/	cực điểm, tột đỉnh
+confetti	noun	/kənˈfeti/	pháo giấy
+kite	Updating	Updating	diều
+add	Updating	Updating	thêm vào
+hi	unknown	/hai/	chao

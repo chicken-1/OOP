@@ -182,7 +182,7 @@
                         <Font size="22.0" />
                      </font>
                   </Button>
-                  <ImageView fx:id="result" fitHeight="53.0" fitWidth="55.0" layoutX="401.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="correct" fitHeight="53.0" fitWidth="55.0" layoutX="401.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@/image/correct.png" />
                      </image>
@@ -202,6 +202,11 @@
                         <Font size="22.0" />
                      </font>
                   </Button>
+                  <ImageView fx:id="incorrect" fitHeight="53.0" fitWidth="55.0" layoutX="401.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/image/incorrect.png" />
+                     </image>
+                  </ImageView>
                     </children>
                 </AnchorPane>
             </children>
