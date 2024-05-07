@@ -131,4 +131,7 @@ public class Game1Controller extends GameController {
 
         anchorPaneGame.getChildren().clear();
     }
+
+
+
 }

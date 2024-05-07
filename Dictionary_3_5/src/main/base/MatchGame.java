@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MatchGame extends Game {
-    private List<String[]> words;
-    private List<String[]> shuffledWords;
+    public List<String[]> words;
+    public List<String[]> shuffledWords;
 
     public MatchGame() {
         words = new ArrayList<>();
@@ -19,8 +19,8 @@ public class MatchGame extends Game {
         shuffleWords();
     }
 
-    private void loadWords() {
-        String wordsFile = "dictionaries.txt";
+    public void loadWords() {
+        String wordsFile = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
         String line;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(wordsFile))) {
@@ -33,9 +33,9 @@ public class MatchGame extends Game {
         }
     }
 
-    private void shuffleWords() {
+    public void shuffleWords() {
         Collections.shuffle(words);
-        shuffledWords.addAll(words.subList(0, 10));
+        shuffledWords.addAll(words.subList(0, 5));
     }
 
     @Override
@@ -48,7 +48,7 @@ public class MatchGame extends Game {
 
         for (int i = 0; i < shuffledWords.size(); i++) {
             column1.add(shuffledWords.get(i)[0]);
-            column2.add(shuffledWords.get(i)[1]);
+            column2.add(shuffledWords.get(i)[3]);
         }
 
         Collections.shuffle(column2);
@@ -81,7 +81,7 @@ public class MatchGame extends Game {
         System.out.println("Your score: " + score + "/" + column1.size());
         System.out.println("The correct answers are:");
         for (String[] answer : fixedanswers) {
-            System.out.println(answer[0] + " - " + answer[1]);
+            System.out.println(answer[0] + " - " + answer[3]);
         }
 
     }
@@ -89,7 +89,7 @@ public class MatchGame extends Game {
     public boolean checkAnswer(List<String> column2, int match1, String match2) {
         int index2 = match2.charAt(0) - 97;
         //int index1 = match1.charAt(0) - 49;
-        return shuffledWords.get(match1)[1].equals(column2.get(index2));
+        return shuffledWords.get(match1)[3].equals(column2.get(index2));
     }
 
     public static void main(String[] args) {

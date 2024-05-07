@@ -22,11 +22,11 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <Button fx:id="OKBtn" layoutX="65.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#handleClickOK" prefHeight="29.0" prefWidth="97.0" styleClass="exitBtn" stylesheets="@../style/dialog.css" text="OK" textFill="WHITE">
+        <Button fx:id="OKBtn" layoutX="65.0" layoutY="155.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="97.0" styleClass="exitBtn" stylesheets="@../style/dialog.css" text="OK" textFill="WHITE">
             <font>
                 <Font size="24.0" />
             </font>
         </Button>
-      <Button fx:id="cancelBtn" layoutX="273.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#handleClickCancel" prefHeight="47.0" prefWidth="97.0" styleClass="OKBtn" stylesheets="@../style/dialog.css" text="Hủy" />
+      <Button fx:id="cancelBtn" layoutX="273.0" layoutY="155.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="97.0" styleClass="OKBtn" stylesheets="@../style/dialog.css" text="Hủy" />
     </children>
 </AnchorPane>

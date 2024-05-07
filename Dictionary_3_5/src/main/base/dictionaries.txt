@@ -115,7 +115,6 @@ whimsical	adjective	/ˈwɪmzɪkl/	bất thường, kỳ quái
 wicked	adjective	/ˈwɪkɪd/	xấu, tội lỗi, ác
 witch	noun	/wɪtʃ/	phù thủy
 wizard	noun	/ˈwɪzərd/	thầy phù thủy
-yawning	adjective	/ˈjɑː.nɪŋ/	(khác biệt) rất lớn, khó suy giảm
+yawning	adjective	/ˈjɑː.nɪŋ/	rất lớn (khác biệt), khó suy giảm
 yearning	noun	/ˈjɜːrnɪŋ/	khao khát, mong mỏi
 zenith	noun	/ˈziːnɪθ/	cực điểm, tột đỉnh
-hi	Updating	Updating	chào

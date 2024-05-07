@@ -12,11 +12,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@../style/matchingGame.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameController">
+<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@/style/matchingGame.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MatchingGameController">
     <children>
         <AnchorPane layoutX="320.8" prefHeight="573.0" prefWidth="501.0" style="-fx-background-radius: 10; -fx-background-color: ffffff;" styleClass="first-color" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
             <children>
-                <AnchorPane layoutX="10.0" prefHeight="552.0" prefWidth="485.0" AnchorPane.bottomAnchor="24.369231484317197" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.676923683663063" AnchorPane.topAnchor="0.0">
+                <AnchorPane fx:id="anchorGamePane" layoutX="10.0" prefHeight="552.0" prefWidth="485.0" AnchorPane.bottomAnchor="24.369231484317197" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.676923683663063" AnchorPane.topAnchor="0.0">
                     <children>
                         <HTMLEditor fx:id="editDefinition" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="-77.6" prefHeight="556.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                         <Label fx:id="gameTitle" alignment="TOP_CENTER" layoutX="183.0" layoutY="14.0" prefHeight="47.0" prefWidth="128.0" text="Nối Từ " textAlignment="CENTER" textFill="#1d93f3">
@@ -29,7 +29,7 @@
                                 <Font size="18.0" />
                             </font>
                         </Label>
-                        <TextField fx:id="eng11" alignment="CENTER" layoutX="23.0" layoutY="115.0" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
+                        <TextField fx:id="eng11" alignment="CENTER" layoutX="23.0" layoutY="115.0" onDragDetected="#handleDragDetect1e" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
                             <font>
                                 <Font size="14.0" />
                             </font>
@@ -39,22 +39,22 @@
                                 <Font size="14.0" />
                             </font>
                         </TextField>
-                        <TextField fx:id="eng12" alignment="CENTER" layoutX="23.0" layoutY="190.0" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
+                        <TextField fx:id="eng12" alignment="CENTER" layoutX="23.0" layoutY="190.0" onDragDetected="#handleDragDetect2e" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </TextField>
-                        <TextField fx:id="eng13" alignment="CENTER" layoutX="23.0" layoutY="270.0" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
+                        <TextField fx:id="eng13" alignment="CENTER" layoutX="23.0" layoutY="270.0" onDragDetected="#handleDragDetect3e" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </TextField>
-                        <TextField fx:id="eng14" alignment="CENTER" layoutX="23.0" layoutY="350.0" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
+                        <TextField fx:id="eng14" alignment="CENTER" layoutX="23.0" layoutY="350.0" onDragDetected="#handleDragDetect4e" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </TextField>
-                        <TextField fx:id="eng15" alignment="CENTER" layoutX="23.0" layoutY="430.0" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
+                        <TextField fx:id="eng15" alignment="CENTER" layoutX="23.0" layoutY="430.0" onDragDetected="#handleDragDetect5e" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
                             <font>
                                 <Font size="14.0" />
                             </font>
@@ -79,14 +79,14 @@
                                 <Font size="14.0" />
                             </font>
                         </TextField>
-                        <HBox fx:id="answer11" layoutX="176.0" layoutY="115.0" prefHeight="47.0" prefWidth="108.0">
+                        <HBox fx:id="answer11" layoutX="176.0" layoutY="115.0" onDragDropped="#handleDragDrop1" onDragOver="#handleDragOver" prefHeight="47.0" prefWidth="108.0">
                             <children>
                                 <TextField fx:id="ans11" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
                                     <font>
                                         <Font size="14.0" />
                                     </font></TextField>
                             </children></HBox>
-                        <HBox fx:id="answer12" layoutX="176.0" layoutY="190.0" prefHeight="47.0" prefWidth="108.0">
+                        <HBox fx:id="answer12" layoutX="176.0" layoutY="190.0" onDragDropped="#handleDragDrop2" onDragOver="#handleDragOver" prefHeight="47.0" prefWidth="108.0">
                             <children>
                                 <TextField fx:id="ans12" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
                                     <font>
@@ -94,7 +94,7 @@
                                     </font></TextField>
                             </children>
                         </HBox>
-                        <HBox fx:id="answer13" layoutX="176.0" layoutY="270.0" prefHeight="47.0" prefWidth="108.0">
+                        <HBox fx:id="answer13" layoutX="176.0" layoutY="270.0" onDragDropped="#handleDragDrop3" onDragOver="#handleDragOver" prefHeight="47.0" prefWidth="108.0">
                             <children>
                                 <TextField fx:id="ans13" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
                                     <font>
@@ -103,7 +103,7 @@
                                 </TextField>
                             </children>
                         </HBox>
-                        <HBox fx:id="answer14" layoutX="176.0" layoutY="350.0" prefHeight="47.0" prefWidth="108.0">
+                        <HBox fx:id="answer14" layoutX="176.0" layoutY="350.0" onDragDropped="#handleDragDrop4" onDragOver="#handleDragOver" prefHeight="47.0" prefWidth="108.0">
                             <children>
                                 <TextField fx:id="ans14" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
                                     <font>
@@ -112,7 +112,7 @@
                                 </TextField>
                             </children>
                         </HBox>
-                        <HBox fx:id="answer15" layoutX="176.0" layoutY="430.0" prefHeight="47.0" prefWidth="108.0">
+                        <HBox fx:id="answer15" layoutX="176.0" layoutY="430.0" onDragDropped="#handleDragDrop5" onDragOver="#handleDragOver" prefHeight="47.0" prefWidth="108.0">
                             <children>
                                 <TextField fx:id="ans15" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
                                     <font>
@@ -121,12 +121,12 @@
                                 </TextField>
                             </children>
                         </HBox>
-                        <Button fx:id="submitBtn" layoutX="350.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickSubmit" prefHeight="35.0" prefWidth="80.0" styleClass="submitBtn" stylesheets="@../style/matchingGame.css" text="Nộp">
+                        <Button fx:id="submitBtn" layoutX="350.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickSubmit" prefHeight="35.0" prefWidth="80.0" styleClass="submitBtn" stylesheets="@/style/matchingGame.css" text="Nộp">
                             <font>
                                 <Font size="18.0" />
                             </font>
                         </Button>
-                        <Button fx:id="exitBtn" layoutX="51.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickExit" prefHeight="35.0" prefWidth="80.0" styleClass="exitBtn" stylesheets="@../style/matchingGame.css" text="Thoát">
+                        <Button fx:id="exitBtn" layoutX="51.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickExit" prefHeight="35.0" prefWidth="80.0" styleClass="exitBtn" stylesheets="@/style/matchingGame.css" text="Thoát">
                             <font>
                                 <Font size="18.0" />
                             </font>
@@ -141,11 +141,11 @@
                <children>
                   <VBox alignment="CENTER" layoutY="64.0" prefHeight="54.0" prefWidth="62.0" styleClass="buttoncKoChon">
                      <children>
-                        <Button fx:id="searchButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickSearch" prefHeight="38.0" prefWidth="38.0" styleClass="buttonKoChon" stylesheets="@../style/Game1.css">
+                        <Button fx:id="searchButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickSearch" prefHeight="38.0" prefWidth="38.0" styleClass="buttonKoChon" stylesheets="@/style/Game1.css">
                            <graphic>
                               <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../image/Vector.png" />
+                                    <Image url="@/image/Vector.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -159,7 +159,7 @@
                            <graphic>
                               <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../image/GameDen-01.png" />
+                                    <Image url="@/image/GameDen-01.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -173,7 +173,7 @@
                            <graphic>
                               <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../image/Google-translate.png" />
+                                    <Image url="@/image/Google-translate.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -191,7 +191,7 @@
                            <graphic>
                               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../image/4x/gamchondapan.png" />
+                                    <Image url="@/image/4x/gamchondapan.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -212,7 +212,7 @@
                            <graphic>
                               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../image/4x/gamenoitu.png" />
+                                    <Image url="@/image/4x/gamenoitu.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -229,11 +229,11 @@
                   </VBox>
                   <VBox alignment="CENTER" layoutX="6.0" layoutY="394.0" prefHeight="164.0" prefWidth="227.0" styleClass="gamekochon">
                      <children>
-                        <Button fx:id="listenGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickListenGame" prefHeight="131.0" prefWidth="153.0" styleClass="button2">
+                        <Button fx:id="listenGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="131.0" prefWidth="153.0" styleClass="button2">
                            <graphic>
                               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../image/4x/gamenghedien.png" />
+                                    <Image url="@/image/4x/gamenghedien.png" />
                                  </image>
                               </ImageView>
                            </graphic>

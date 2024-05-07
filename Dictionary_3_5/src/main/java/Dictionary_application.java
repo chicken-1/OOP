@@ -1,4 +1,3 @@
-import com.example.dictionary_3_5.HelloApplication;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

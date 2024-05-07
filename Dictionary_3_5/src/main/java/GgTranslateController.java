@@ -1,6 +1,8 @@
 import base.API_Translate;
 import base.DictionaryManagement;
 import base.Word;
+import com.sun.speech.freetts.Voice;
+import com.sun.speech.freetts.VoiceManager;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,8 +14,9 @@ import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 import java.util.*;
 
-public class GgTranslateController {
+public class GgTranslateController extends GeneralController{
 
+    public Button enToViBtn;
     private Word translateWord;
     private DictionaryManagement dictionaryManagement;
     private final String filepath = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
@@ -120,15 +123,38 @@ public class GgTranslateController {
         alert.showAndWait();
     }
 
-    public void handleClickChange(MouseEvent mouseEvent) {
-        checkEN = !checkEN;
-        if (checkEN) {
-            langFromLabel.setText("EN");
-            langToLabel.setText("VI");
-        } else {
-            langFromLabel.setText("VI");
-            langToLabel.setText("EN");
-        }
+    public void handleClickVi_En(ActionEvent actionEvent) {
+        checkEN = false;
+    }
 
+    public void handleClickEn_Vi(ActionEvent actionEvent) {
+        checkEN = true;
+    }
+
+    public void handleClickSpeaker(ActionEvent actionEvent) {
+        String text;
+        if (checkEN) {
+            text = textToTranslate1.getText();
+        } else {
+            text = resultArea.getText();
+        }
+        Voice voice;
+        System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
+        voice = VoiceManager.getInstance().getVoice("kevin16");
+        if (voice != null) {
+            voice.allocate();// Allocating Voice
+            try {
+                voice.setRate(160);
+                voice.setStyle("casual");
+                voice.setVolume(5);// Setting the volume of the voice
+                voice.speak(text);// Calling speak() method
+
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+
+        } else {
+            throw new IllegalStateException("Cannot find voice: kevin16");
+        }
     }
 }
