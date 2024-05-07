@@ -96,13 +96,29 @@
     -fx-border-radius: 5 5 5 5; /* Bo tròn góc viền */
 }
 
-.buttonThuong {
-    -fx-background-color: #238FE7;
-    -fx-background-radius: 5 5 5 5; /* Bo tròn góc nền */
-    -fx-border-radius: 5 5 5 5; /* Bo tròn góc viền */
+/* Định nghĩa style cho các web view */
+.web-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
 }
-.titleChon {
-    -fx-font-family: "SVN-Gilroy XBold";
-    -fx-font-size: 18px;
-    -fx-text-fill: #ffffff;
+
+/* Định nghĩa style cho các HTML editor */
+.html-editor .top-tool-bar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #000000;
+    -fx-opacity: 0;
 }
+/* Style cho hien thị ket qua tim kiem */
+.word-target {
+    -fx-font-family: "SVN-Gilroy Bold";
+    -fx-font-size: 25px;
+    -fx-text-fill: #1D93F3;
+    text-align: center;
+}
+
+.word-explain {
+    font-family: Arial;
+    color: green;
+    font-size: 10px;
+}
+/*=====================================================*/

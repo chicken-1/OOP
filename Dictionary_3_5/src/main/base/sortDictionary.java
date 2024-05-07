@@ -13,8 +13,8 @@ import java.util.List;
 public class sortDictionary {
 
     public void action() {
-        String inputFile = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\test.txt";
-        String outputFile = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\test.txt";
+        String inputFile = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
+        String outputFile = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
 
         List<String> lines = new ArrayList<>();
 

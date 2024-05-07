@@ -37,7 +37,7 @@
                         </VBox>
                         <VBox alignment="CENTER" layoutY="130.0" prefHeight="54.0" prefWidth="62.0" styleClass="buttoncKoChon">
                             <children>
-                                <Button fx:id="gameButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleClickGame" prefHeight="38.0" prefWidth="38.0" styleClass="buttonThuong">
+                                <Button fx:id="gameButton" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleClickGame" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: 000000;" styleClass="buttonCnang">
                                     <graphic>
                                         <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -51,7 +51,7 @@
                         </VBox>
                   <VBox alignment="CENTER" layoutY="190.0" prefHeight="70.0" prefWidth="62.0" styleClass="buttoncKoChon">
                      <children>
-                        <Button fx:id="translateBtn" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleClickTranslate" prefHeight="38.0" prefWidth="38.0" styleClass="buttonThuong">
+                        <Button fx:id="translateBtn" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleClickTranslate" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: 000000;" styleClass="buttoncChon">
                            <graphic>
                               <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -72,7 +72,7 @@
                 <HBox layoutX="25.0" layoutY="17.0" prefHeight="40.0" prefWidth="390.0" />
                 <AnchorPane layoutX="10.0" layoutY="87.0" prefHeight="468.0" prefWidth="472.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="87.0">
                     <children>
-                        <WebView fx:id="definitionView" layoutX="44.8" layoutY="-7.2" prefHeight="485.0" prefWidth="456.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-7.0" />
+                        <WebView fx:id="definitionView" layoutX="-5.6" layoutY="-7.2" prefHeight="485.0" prefWidth="507.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-7.0" />
                         <HTMLEditor fx:id="editDefinition" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="-77.6" prefHeight="556.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                         <Button fx:id="speaker" layoutX="353.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleClickSpeaker" prefHeight="30.0" prefWidth="28.0" styleClass="buttonSpeaker" textFill="#8e9297">
                             <font>
@@ -90,7 +90,7 @@
                             <font>
                                 <Font name="SVN-GilroyHeavy" size="16.0" />
                             </font></Label>
-                        <Label fx:id="headText" layoutX="26.0" layoutY="-57.0" prefHeight="40.0" prefWidth="390.0" styleClass="titleTieude" text="Nghĩa của từ" textAlignment="CENTER" textFill="#902929">
+                        <Label fx:id="headText" alignment="CENTER" layoutX="26.0" layoutY="-57.0" prefHeight="40.0" prefWidth="390.0" styleClass="titleTieude" text="Nghĩa của từ" textAlignment="CENTER" textFill="#902929" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0">
                             <font>
                                 <Font name="SVN-GilroyBlack" size="10.0" />
                             </font>

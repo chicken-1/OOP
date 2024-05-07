@@ -62,7 +62,7 @@
                <children>
                   <VBox alignment="CENTER" layoutY="64.0" prefHeight="54.0" prefWidth="62.0" styleClass="buttoncKoChon">
                      <children>
-                        <Button fx:id="searchButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickSearch" prefHeight="38.0" prefWidth="38.0" styleClass="buttonThuong" stylesheets="@/style/Game1.css">
+                        <Button fx:id="searchButton" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickSearch" prefHeight="38.0" prefWidth="38.0" styleClass="buttonKoChon" stylesheets="@/style/Game1.css">
                            <graphic>
                               <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -90,7 +90,7 @@
                   </VBox>
                   <VBox alignment="CENTER" layoutY="190.0" prefHeight="70.0" prefWidth="62.0" styleClass="buttoncKoChon">
                      <children>
-                        <Button fx:id="translateBtn" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleClickTranslate" prefHeight="38.0" prefWidth="38.0" styleClass="buttonThuong">
+                        <Button fx:id="translateBtn" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleClickTranslate" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: 000000;" styleClass="buttoncChon">
                            <graphic>
                               <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -108,7 +108,7 @@
                <children>
                   <VBox alignment="CENTER" layoutX="6.0" layoutY="14.0" prefHeight="164.0" prefWidth="227.0" styleClass="chonGame" AnchorPane.topAnchor="14.0">
                      <children>
-                        <Button fx:id="multiChoiceGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="131.0" prefWidth="153.0" styleClass="button1" stylesheets="@../style/Game1.css">
+                        <Button fx:id="multiChoiceGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="131.0" prefWidth="153.0" styleClass="button1">
                            <graphic>
                               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -117,7 +117,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch2" alignment="CENTER" prefHeight="26.0" prefWidth="187.0" styleClass="titleChon" text="Chọn đáp án đúng">
+                        <Label fx:id="titleSearch2" alignment="CENTER" prefHeight="26.0" prefWidth="187.0" text="Chọn đáp án đúng" textFill="#1d93f3">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding>
@@ -138,7 +138,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch21" alignment="CENTER" prefHeight="27.0" prefWidth="175.0" styleClass="titlekChon" text="Nối từ" textFill="WHITE">
+                        <Label fx:id="titleSearch21" alignment="CENTER" prefHeight="27.0" prefWidth="175.0" text="Nối từ" textFill="WHITE">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding>
@@ -159,7 +159,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch22" alignment="CENTER" prefHeight="26.0" prefWidth="187.0" styleClass="titlekChon" text="Nghe và nhập từ" textFill="WHITE">
+                        <Label fx:id="titleSearch22" alignment="CENTER" prefHeight="26.0" prefWidth="187.0" text="Nghe và nhập từ" textFill="WHITE">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding>

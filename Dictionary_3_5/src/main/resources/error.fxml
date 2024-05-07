@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="206.0" prefWidth="359.0" stylesheets="@/style/dialog.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ErrorController">
+    <children>
+        <HBox layoutX="-1.0" prefHeight="63.0" prefWidth="360.0" styleClass="button1" stylesheets="@/style/dialog.css">
+            <children>
+                <Label alignment="CENTER" layoutX="300.0" layoutY="300.0" prefHeight="69.0" prefWidth="431.0" text="Lỗi" textFill="WHITE">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <Label fx:id="errorMsg" alignment="CENTER" layoutX="10.0" layoutY="88.0" prefHeight="30.0" prefWidth="338.0" text="error mesage" textAlignment="CENTER">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="OKBtn" layoutX="222.0" layoutY="148.0" mnemonicParsing="false" onAction="#handleClickOK" prefHeight="29.0" prefWidth="97.0" styleClass="OKBtn" stylesheets="@/style/dialog.css" text="OK" textFill="WHITE">
+
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+
+    </children>
+</AnchorPane>

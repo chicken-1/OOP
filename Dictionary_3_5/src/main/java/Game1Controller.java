@@ -6,15 +6,19 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Game1Controller extends GameController {
+    public Button exitButton;
     private QuizGame game;
     private List<Question> questions;
     private int currentQuestionId;
@@ -104,7 +108,7 @@ public class Game1Controller extends GameController {
 
     }
 
-    public void handleClickNext(ActionEvent actionEvent) {
+    public void handleClickNext(ActionEvent actionEvent) throws IOException {
         currentQuestionId++;
         if (currentQuestionId < (questions.size() - 1)) {
             displayQuestion(currentQuestionId);
@@ -112,25 +116,50 @@ public class Game1Controller extends GameController {
             nextQuestionButton.setText("Nộp bài");
             displayQuestion(currentQuestionId);
         } else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Số câu đúng");
-            alert.setHeaderText(null);
-            alert.setContentText("Bạn có " + score + "/" + questions.size() + " câu đúng!");
-            alert.showAndWait();
+            showSccore();
 
             anchorPaneGame.getChildren().clear();
         }
     }
 
-    public void handleClickExit(ActionEvent actionEvent) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Số câu đúng");
-        alert.setHeaderText(null);
-        alert.setContentText("Bạn có " + score + "/" + questions.size() + " câu đúng!");
-        alert.showAndWait();
+    public void handleClickExit(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("exit.fxml"));
+        Parent root = loader.load();
 
-        anchorPaneGame.getChildren().clear();
+        Stage dialogStage = new Stage();
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        dialogStage.initOwner(exitButton.getScene().getWindow());
+        dialogStage.setScene(new Scene(root));
+        dialogStage.setTitle("Thoát");
+
+        ExitController exitController = loader.getController();
+        exitController.setDialogStage(dialogStage);
+        dialogStage.showAndWait();
+
+        if (exitController.dialogStage.getUserData().equals("1")) {
+            showSccore();
+            anchorPaneGame.getChildren().clear();
+        }
     }
+
+    public void showSccore() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("resultGame1.fxml"));
+        Parent root = loader.load();
+
+        Stage dialogStage = new Stage();
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        dialogStage.initOwner(nextQuestionButton.getScene().getWindow());
+        dialogStage.setScene(new Scene(root));
+        dialogStage.setTitle("Điểm");
+
+        Result2Controller controller = loader.getController();
+        controller.setDialogStage(dialogStage);
+        controller.init(score);
+        dialogStage.showAndWait();
+    }
+
 
 
 

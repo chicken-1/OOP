@@ -41,12 +41,6 @@
     -fx-background-radius: 3 3 3 3; /* Bo tròn góc nền */
     -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
 }
-
-.buttonThuong {
-    -fx-background-color: #238FE7;
-    -fx-background-radius: 5 5 5 5; /* Bo tròn góc nền */
-    -fx-border-radius: 5 5 5 5; /* Bo tròn góc viền */
-}
 /*=====================================================*/
 
 /* Định nghĩa style cho các label */

@@ -25,7 +25,7 @@ public class QuizGame extends Game {
 
     public List<Question> loadQuestions() throws IOException {
         List<Question> questions = new ArrayList<>();
-        String questionsFile = "D:\\App\\Scene Builder\\tempOOP\\OOP\\Dictionary_3_5\\src\\main\\base\\quizGame.txt";
+        String questionsFile = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\quizGame.txt";
         String line;
         Question question = null;
 

@@ -17,6 +17,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.web.HTMLEditor;
 import javafx.scene.web.WebView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -28,7 +29,7 @@ public class SearchController extends GeneralController {
     private DictionaryManagement dictionaryManagement;
     private Word selectedWord;
     private final ObservableList<Word> wordList = FXCollections.observableArrayList();
-    private final String filepath = "D:\\App\\Scene Builder\\tempOOP\\OOP\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
+    private final String filepath = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
 
     @FXML
     private TextField searchField;
@@ -76,17 +77,13 @@ public class SearchController extends GeneralController {
     }
 
     @FXML
-    private void searchFieldAction(KeyEvent event) {
+    private void searchFieldAction(KeyEvent event) throws IOException {
         String search = searchField.getText();
         search = search.toLowerCase();
         if (!search.equals("")) {
             List<Word> words = dictionaryManagement.dictionarySearcher(search);
             if (words.isEmpty()) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Error");
-                alert.setHeaderText(null);
-                alert.setContentText("No words found");
-                alert.showAndWait();
+                alertError("Không tìm thấy!");
                 return;
             }
             wordList.clear();
@@ -100,11 +97,11 @@ public class SearchController extends GeneralController {
     }
 
     @FXML
-    private void handleClickListView() {
+    private void handleClickListView() throws IOException {
         this.selectedWord = wordListView.getSelectionModel().getSelectedItem();
         if (selectedWord == null) {
             // Show an error message
-            noneSelectedWord_alert();
+            alertError("Chưa có từ nào được chọn!");
             return;
         }
 
@@ -117,84 +114,60 @@ public class SearchController extends GeneralController {
                 "<html><head><link rel='stylesheet' type='text/css' href='search.css'></head><body>" +
                         "<div style='font-family: \"SVN-Gilroy Heavy\";" +
                         "font-size: 40px; color: #1D93F3;" +
-                        "text-align: left; padding-top: 95px;'>" + word.getWord_target() + "</div>" +
+                        "text-align: center; padding-top: 95px;'>" + word.getWord_target() + "</div>" +
                         "<div style='font-family: \"Dexa Round Med Ita\";" +
                         "font-size: 20px; color: #000000;" +
-                        "text-align: left; padding-top: 50px;'>" + word.getWord_type() + "</div>" +
+                        "text-align: center; padding-top: 50px;'>" + word.getWord_type() + "</div>" +
                         "<div style='font-family: \"Dexa Round Med\";" +
                         "font-size: 20px; color: #000000;" +
-                        "text-align: left; padding-top: 20px;'>" + word.getWord_pronunciation() + "</div>" +
+                        "text-align: center; padding-top: 20px;'>" + word.getWord_pronunciation() + "</div>" +
                         "<div style='font-family: \"DejaVu Serif\";" +
                         "font-size: 20px; color: #000000;" +
-                        "text-align: left; padding-top: 20px;'>" + word.getWord_explain() + "</div>" +
+                        "text-align: center; padding-top: 20px;'>" + word.getWord_explain() + "</div>" +
                         "</body></html>");
     }
 
     @FXML
-    private void handleAddButton(ActionEvent actionEvent) {
-        // Create a new dialog for adding a word
-        Dialog<Word> dialog = new Dialog<>();
-        dialog.setTitle("Thêm từ");
-        dialog.setHeight(292.00);
-        dialog.setWidth(421.00);
+    private void handleAddButton(ActionEvent actionEvent) throws IOException {
 
-        // Create the word and definition fields
-        TextField wordField = new TextField();
-        wordField.setPromptText("Từ:");
-        TextField wordTypeFeild = new TextField();
-        wordTypeFeild.setPromptText("Loại từ:");
-        TextField pronunciationField = new TextField();
-        pronunciationField.setPromptText("Phát âm:");
-        TextField definitionField = new TextField();
-        definitionField.setPromptText("Nghĩa:");
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("addWord.fxml"));
+        Parent root = loader.load();
 
+        Stage dialogStage = new Stage();
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        dialogStage.initOwner(updatedButton.getScene().getWindow());
+        dialogStage.setScene(new Scene(root));
+        dialogStage.setTitle("Thêm từ");
 
-        // Create the dialog content
-        GridPane content = new GridPane();
-        content.setHgap(10);
-        content.setVgap(10);
-        content.add(new Label("Từ:"), 0, 0);
-        content.add(wordField, 1, 0);
-        content.add(new Label("Loại từ:"), 0, 1);
-        content.add(wordTypeFeild, 1, 1);
-        content.add(new Label("Phát âm:"), 0, 2);
-        content.add(pronunciationField, 1, 2);
-        content.add(new Label("Nghĩa:"), 0, 3);
-        content.add(definitionField, 1, 3);
+        AddController controller = loader.getController();
+        controller.setDialogStage(dialogStage);
+        dialogStage.showAndWait();
+        // if click OK
+        if (dialogStage.getUserData().equals("1")) {
+            // if word field is not null
+            List<String> r = controller.getResult();
+            System.out.println(r.get(0) + " " + r.get(1) + " " + r.get(2) + " " + r.get(3));
 
-
-        // Set the dialog content
-        dialog.getDialogPane().setContent(content);
-
-        // Create the OK and Cancel buttons
-        ButtonType okButtonType = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
-        ButtonType cancelButtonType = new ButtonType("Hủy", ButtonBar.ButtonData.CANCEL_CLOSE);
-        dialog.getDialogPane().getButtonTypes().addAll(okButtonType, cancelButtonType);
-
-        // Create the result converter
-        dialog.setResultConverter(dialogButton -> {
-            if (dialogButton == okButtonType && !wordField.getText().trim().isEmpty()) {
-                Word word = new Word(wordField.getText(), wordTypeFeild.getText(), pronunciationField.getText(), definitionField.getText());
-                return word;
+            if (!r.get(0).equals("Updating")) {
+                System.out.println("hhello");
+                Word newWord = new Word(r.get(0), r.get(1), r.get(2), r.get(3));
+                if (dictionaryManagement.dictionaryLookup(newWord.getWord_target()) != null) {
+                    alertError("Từ này đã tồn tại!");
+                    return;
+                }
+                dictionaryManagement.addWord(newWord);
+                dictionaryManagement.exportToFile(filepath);
+                //wordList.add(newWord);
+                wordListView.getSelectionModel().select(newWord);
             }
-            return null;
-        });
-
-        // Show the dialog and get the result
-        Optional<Word> result = dialog.showAndWait();
-        if (result.isPresent()) {
-            Word newWord = result.get();
-            dictionaryManagement.addWord(newWord);
-            dictionaryManagement.exportToFile(filepath);
-            //wordList.add(newWord);
-            wordListView.getSelectionModel().select(newWord);
         }
     }
 
     @FXML
-    private void handleClickSpeaker(ActionEvent actionEvent) {
+    private void handleClickSpeaker(ActionEvent actionEvent) throws IOException {
         if (selectedWord == null) {
-            noneSelectedWord_alert();
+            alertError("Chưa có từ nào được chọn!");
             return;
         }
         Voice voice;
@@ -218,93 +191,91 @@ public class SearchController extends GeneralController {
     }
 
     @FXML
-    private void handleRemoveButton(ActionEvent actionEvent) {
+    private void handleRemoveButton(ActionEvent actionEvent) throws IOException {
         if (selectedWord == null) {
-            noneSelectedWord_alert();
+            alertError("Chưa có từ nào được chọn!");
             return;
         }
-        // Confirm removal
-        Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
-        confirmAlert.setTitle("Xóa");
-        confirmAlert.setHeaderText("Xóa từ: " + selectedWord.getWord_target());
-        confirmAlert.setContentText("Bạn có muốn xóa từ này khỏi từ điển cá nhân của bạn?");
-        Optional<ButtonType> result = confirmAlert.showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.OK) {
-            // remove the word from dictionary
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("removeWord.fxml"));
+        Parent root = loader.load();
+
+        Stage dialogStage = new Stage();
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        dialogStage.initOwner(removeButton.getScene().getWindow());
+        dialogStage.setScene(new Scene(root));
+        dialogStage.setTitle("Xóa từ");
+
+        ExitController exitController = loader.getController();
+        exitController.setDialogStage(dialogStage);
+        dialogStage.showAndWait();
+
+        if (exitController.dialogStage.getUserData().equals("1")) {
             dictionaryManagement.removeWord(selectedWord.getWord_target());
             dictionaryManagement.exportToFile(filepath);
             wordList.remove(selectedWord);
             wordListView.getSelectionModel().clearSelection();
-            editDefinition.setVisible(false);
-        }
+            definitionView.setVisible(false);
     }
+        }
 
     @FXML
-    private void handleUpdateButton(ActionEvent actionEvent) {
+    private void handleUpdateButton(ActionEvent actionEvent) throws IOException {
 
         if (selectedWord == null) {
-            noneSelectedWord_alert();
+            alertError("Chưa có từ nào được chọn!");
             return;
         }
-        Dialog<Word> dialog = new Dialog<>();
-        dialog.setTitle("Cập nhật");
-        dialog.setHeaderText("Cập nhật từ " + selectedWord.getWord_target() + " : ");
-        dialog.setHeight(292.00);
-        dialog.setWidth(421.00);
 
-        // Create definitionField
-        TextField wordTypeFeild = new TextField();
-        wordTypeFeild.setPromptText("Loại từ:");
-        TextField pronunciationField = new TextField();
-        pronunciationField.setPromptText("Phát âm:");
-        TextField definitionField = new TextField();
-        definitionField.setPromptText("Nghĩa:");
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("updateWord.fxml"));
+        Parent root = loader.load();
 
-        // Create the dialog content
-        GridPane content = new GridPane();
-        content.setHgap(10);
-        content.setVgap(10);
-        content.add(new Label("Loại từ:"), 0, 0);
-        content.add(wordTypeFeild, 1, 0);
-        content.add(new Label("Phát âm:"), 0, 1);
-        content.add(pronunciationField, 1, 1);
-        content.add(new Label("Nghĩa:"), 0, 2);
-        content.add(definitionField, 1, 2);
+        Stage dialogStage = new Stage();
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        dialogStage.initOwner(updatedButton.getScene().getWindow());
+        dialogStage.setScene(new Scene(root));
+        dialogStage.setTitle("Cập nhật từ");
 
-        // Set the dialog content
-        dialog.getDialogPane().setContent(content);
+        UpdateController controller = loader.getController();
+        controller.setDialogStage(dialogStage);
+        controller.init(selectedWord.getWord_target());
+        dialogStage.showAndWait();
 
-        // Create OK and Cancel button
-        ButtonType okButtonType = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
-        ButtonType cancelButtonType = new ButtonType("Hủy", ButtonBar.ButtonData.CANCEL_CLOSE);
-        dialog.getDialogPane().getButtonTypes().addAll(okButtonType, cancelButtonType);
+        // if click OK
+        if (dialogStage.getUserData().equals("1")) {
+            List<String> r = controller.getResult();
 
-        // Create result converter
-        dialog.setResultConverter(buttonType -> {
-            if (buttonType == okButtonType) {
-                return new Word(selectedWord.getWord_target(), wordTypeFeild.getText().replace(" ", ""), pronunciationField.getText().replace(" ", ""), definitionField.getText());
+            if (!r.get(0).equals("Updating") && !r.get(1).equals("Updating") && !r.get(2).equals("Updating")) {
+                Word updatedWord = new Word(selectedWord.getWord_target(), r.get(0), r.get(1), r.get(2));
+                System.out.println(updatedWord.getWord_explain() + " " + updatedWord.getWord_pronunciation() + " " + updatedWord.getWord_type());
+                dictionaryManagement.updatedWord(selectedWord, updatedWord);
+                dictionaryManagement.exportToFile(filepath);
+                wordList.set(wordListView.getSelectionModel().getSelectedIndex(), updatedWord);
+                wordListView.getSelectionModel().select(updatedWord);
+                handleClickListView();
             }
-            return null;
-        });
-
-        // Show the dialod and get the result
-        Optional<Word> result = dialog.showAndWait();
-        if (result.isPresent()) {
-            Word updatedWord = result.get();
-            dictionaryManagement.updatedWord(selectedWord, updatedWord);
-            dictionaryManagement.exportToFile(filepath);
-            wordList.set(wordListView.getSelectionModel().getSelectedIndex(), updatedWord);
-            wordListView.getSelectionModel().select(updatedWord);
-            handleClickListView();
-
         }
+
+
+
     }
 
-    public void noneSelectedWord_alert() {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Lỗi");
-        alert.setHeaderText("Chưa có từ nào được chọn.");
-        alert.setContentText("Hãy chọn một từ để thực hiện thao tác này.");
-        alert.showAndWait();
+    public void alertError(String errorMsg) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("error.fxml"));
+        Parent root = loader.load();
+
+        Stage dialogStage = new Stage();
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        dialogStage.initOwner(updatedButton.getScene().getWindow());
+        dialogStage.setScene(new Scene(root));
+        dialogStage.setTitle("Lỗi");
+
+        ErrorController controller = loader.getController();
+        controller.setDialogStage(dialogStage);
+        controller.setErrorMsg(errorMsg);
+        dialogStage.showAndWait();
     }
 }

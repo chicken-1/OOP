@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class DictionaryManagement {
    
     private Dictionary dictionary;
+    //private sortDictionary sort0;
 
     public DictionaryManagement() {
         dictionary = new Dictionary();
@@ -132,6 +133,7 @@ public class DictionaryManagement {
         } catch (IOException e) {
             System.err.println("Error writing to file: " + e.getMessage());
         }
+        //sort0.action();
     }
 
     public void matchGame() {

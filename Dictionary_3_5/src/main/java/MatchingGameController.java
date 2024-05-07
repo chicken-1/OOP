@@ -1,8 +1,13 @@
 import base.MatchGame;
+import javafx.animation.Interpolator;
+import javafx.animation.ScaleTransition;
 import javafx.css.Styleable;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -10,8 +15,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
+import java.awt.*;
+import java.io.IOException;
 import java.util.*;
+import java.util.List;
 
 public class MatchingGameController extends GameController {
     private MatchGame game;
@@ -154,7 +166,35 @@ public class MatchingGameController extends GameController {
     }
 
     @FXML
-    public void handleClickSubmit(MouseEvent mouseEvent) {
+    public void handleClickSubmit(MouseEvent mouseEvent) throws IOException {
+
+        showScore();
+
+        anchorGamePane.getChildren().clear();
+    }
+    @FXML
+    public void handleClickExit(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("exit.fxml"));
+        Parent root = loader.load();
+
+        Stage dialogStage = new Stage();
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        dialogStage.initOwner(exitBtn.getScene().getWindow());
+        dialogStage.setScene(new Scene(root));
+        dialogStage.setTitle("Thoát");
+
+        ExitController exitController = loader.getController();
+        exitController.setDialogStage(dialogStage);
+        dialogStage.showAndWait();
+
+        if (exitController.dialogStage.getUserData().equals("1")) {
+            showScore();
+            anchorGamePane.getChildren().clear();
+        }
+    }
+
+    public void showScore () throws IOException {
         for (int i = 0; i < 5; i++) {
             String ans = ((TextField) ansBoxes.get(i).getChildren().get(0)).getText();
             String correctAns = game.shuffledWords.get(i)[0];
@@ -162,26 +202,21 @@ public class MatchingGameController extends GameController {
                 score++;
             }
         }
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Điểm: ");
-        alert.setHeaderText(null);
-        alert.setContentText(String.valueOf(score));
-        alert.showAndWait();
+        FXMLLoader loader = new FXMLLoader();
+           loader.setLocation(getClass().getResource("resultMatchingGame.fxml"));
+           Parent root = loader.load();
 
+           Stage dialogStage = new Stage();
+           dialogStage.initModality(Modality.APPLICATION_MODAL);
+           dialogStage.initOwner(submitBtn.getScene().getWindow());
+           dialogStage.setScene(new Scene(root));
+           dialogStage.setTitle("Điểm");
+
+           Result2Controller controller = loader.getController();
+           controller.setDialogStage(dialogStage);
+           controller.init(score);
+           dialogStage.showAndWait();
     }
-
-    @FXML
-    public void handleClickExit(MouseEvent mouseEvent) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Thoát");
-        alert.setHeaderText(null);
-        alert.setContentText("Bạn có muốn thoát khỏi lượt chơi này không?");
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.OK) {
-            anchorGamePane.getChildren().clear();
-        }
-    }
-
 
     public TextField findEngField(String content) {
         for (TextField textField : engTextFields) {
