@@ -114,15 +114,19 @@ public class SearchController extends GeneralController {
         // set up presentation of difinitionView
         definitionView.getEngine().loadContent(
                 "<html><head><link rel='stylesheet' type='text/css' href='search.css'></head><body>" +
-                        "<div style='font-family: \"SVN-Gilroy Heavy\";" +
-                        "font-size: 40px; color: #1D93F3;" +
-                        "text-align: center; padding-top: 90px;'>" + word.getWord_target() + "</div>" +
-                        "<div style='font-family: \"SVN-Gilroy Medium\";" +
-                        "font-size: 20px; color: #000000;" +
-                        "text-align: center; padding-top: 20px;'>" + word.getWord_explain() + "</div>" +
-                        "</body></html>");
-    }
-
+                "<div style='font-family: \"SVN-Gilroy XBold\";" +
+                "font-size: 40px; color: #1D93F3;" +
+                "text-align: left; padding-top: 95px;'>" + word.getWord_target() + "</div>" +
+                "<div style='font-family: \"Dexa Round Med Ita\";" +
+                "font-size: 20px; color: #000000;" +
+                "text-align: left; padding-top: 50px;'>" + word.getWord_type() + "</div>" +
+                "<div style='font-family: \"Dexa Round Med\";" +
+                "font-size: 20px; color: #000000;" +
+                "text-align: left; padding-top: 20px;'>" + word.getWord_pronunciation() + "</div>" +
+                "<div style='font-family: \"DejaVu Serif\";" +
+                "font-size: 20px; color: #000000;" +
+                "text-align: left; padding-top: 20px;'>" + word.getWord_explain() + "</div>" +
+                "</body></html>");
     @FXML
     private void handleAddButton(ActionEvent actionEvent) {
         // Create a new dialog for adding a word

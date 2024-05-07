@@ -1,0 +1,57 @@
+.buttonChon {
+    -fx-background-color: #ffffff;
+}
+
+.buttoncKoChon {
+    -fx-background-color: #1D93F3;
+}
+
+.nen {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+}
+.buttonAdd {
+    -fx-background-color: DCF7E6;
+    -fx-border-color: #C2F2D3;
+    -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
+}
+
+.buttonSpeaker {
+    -fx-background-color: #C2DEF2;
+    -fx-border-color: #C0D5E2;
+    -fx-background-radius: 3 3 3 3; /* Bo tròn góc nền */
+    -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
+}
+
+/* Định nghĩa style cho các text field */
+.timkiem {
+    -fx-text-fill: #000000;
+    -fx-background-color: #EEF3FC;
+    -fx-border-color: #1D93F3;
+    -fx-background-radius:  10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.ketQua {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+    -fx-border-color: #1D93F3;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-font-size: 12px;
+}
+
+.buttonLanguage {
+    -fx-background-color: #1D93F3;
+    -fx-border-color: #1D93F3;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+    -fx-font-family: "SVN-Gilroy Heavy";
+    -fx-font-size: 16px;
+}
+.panecolor1 {
+    -fx-background-color: #1D93F3; /* Màu nền của pane */
+}
+.pane-color {
+    -fx-background-color: #ffffff; /* Màu nền của pane */
+}
