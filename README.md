@@ -9,11 +9,11 @@
 This is a repository to save practical project of Course: INT2204-1 Object-oriented programming (OOP) at VNU University of Engineering and Technology, in the Spring Semester of 2024.
 
 Our project includes developing a command line version and a graphic user interface (GUI) version of an English learning application with the following features:
-- An English-Vietnamese file data for the personalized English-Vietnamese dictionary, from here one can add/remove/update the file. File includes English words and their Vietnamese meanings, parts of speech and phonetic transcriptions.
+- An English-Vietnamese file data for the personalized English-Vietnamese dictionary, from here one can add/remove/update any word. File includes English words and their Vietnamese meanings, parts of speech and phonetic transcriptions.
 - Google Translate API to translate any word/text.
 - Text-to-speech library (FreeTTS) to read out loud any word.
 - Lookup function to search for any words from the personalized dictionary.
-- Interactive games to memorize vocabulary.
+- Interactive games to memorize vocabulary and review grammar.
 
 We use JavaFX and Scene Builder for front-end development. Inheritance trees for each version are also included in the repository.
 
