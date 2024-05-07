@@ -15,9 +15,9 @@
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="38.0" style="-fx-background-color: #1D93F3;" styleClass="panecolor1">
          <children>
-            <VBox alignment="CENTER" layoutY="64.0" prefHeight="54.0" prefWidth="62.0" styleClass="buttoncChon" AnchorPane.topAnchor="64.0">
+            <VBox alignment="CENTER" layoutY="64.0" prefHeight="54.0" prefWidth="62.0" styleClass="buttoncKoChon" AnchorPane.topAnchor="64.0">
                <children>
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0">
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: 000000;" styleClass="buttonCnang">
                      <graphic>
                         <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -43,7 +43,7 @@
                   <Label fx:id="titleSearch1" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="55.0" text="Game" textFill="WHITE" />
                </children>
             </VBox>
-            <VBox alignment="CENTER" layoutY="192.0" prefHeight="70.0" prefWidth="62.0" styleClass="buttoncKoChon">
+            <VBox alignment="CENTER" layoutY="190.0" prefHeight="70.0" prefWidth="62.0" styleClass="buttoncKoChon">
                <children>
                   <Button fx:id="gameButton1" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleClickGame" prefHeight="38.0" prefWidth="38.0" styleClass="buttoncChon">
                      <graphic>

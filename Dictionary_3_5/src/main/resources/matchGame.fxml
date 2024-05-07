@@ -46,6 +46,20 @@
                                 <Label fx:id="titleSearch1" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="55.0" text="Game" textFill="WHITE" />
                             </children>
                         </VBox>
+                  <VBox alignment="CENTER" layoutY="190.0" prefHeight="70.0" prefWidth="62.0" styleClass="buttoncKoChon">
+                     <children>
+                        <Button fx:id="gameButton1" alignment="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleClickGame" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: 000000;" styleClass="buttoncChon">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/Google-translate.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="titleSearch11" alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="12.0" prefWidth="55.0" text="Translate" textFill="WHITE" />
+                     </children>
+                  </VBox>
                     </children>
                 </AnchorPane>
                 <AnchorPane layoutX="65.0" prefHeight="575.0" prefWidth="239.0" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
