@@ -38,6 +38,7 @@
     -fx-border-radius: 10 10 10 10;
     -fx-border-color: #1D93F3;
     -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-font-color: #000000;
     -fx-font-size: 12px;
 }
 
@@ -54,4 +55,9 @@
 }
 .pane-color {
     -fx-background-color: #ffffff; /* Màu nền của pane */
+}
+.buttonThuong {
+    -fx-background-color: #238FE7;
+    -fx-background-radius: 5 5 5 5; /* Bo tròn góc nền */
+    -fx-border-radius: 5 5 5 5; /* Bo tròn góc viền */
 }

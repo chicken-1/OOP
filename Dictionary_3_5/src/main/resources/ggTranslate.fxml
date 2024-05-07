@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="841.0" style="-fx-background-color: #1D93F3;" styleClass="panecolor1" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GgTranslateController">
+<AnchorPane prefHeight="600.0" prefWidth="841.0" style="-fx-background-color: #1D93F3;" styleClass="panecolor1" stylesheets="@/style/ggTranslate.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GgTranslateController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="38.0" style="-fx-background-color: #1D93F3;" styleClass="panecolor1">
          <children>
@@ -19,7 +19,7 @@
                      <graphic>
                         <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@/image/Vector.png" />
+                              <Image url="@/image/timKiemWhite.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -57,14 +57,14 @@
             </VBox>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="67.8" layoutY="14.4" prefHeight="576.0" prefWidth="757.0" styleClass="nen" stylesheets="@/style/ggTranslate.css" AnchorPane.bottomAnchor="14.399999999999977" AnchorPane.leftAnchor="67.8" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="14.4">
+      <AnchorPane layoutX="67.8" layoutY="14.4" prefHeight="576.0" prefWidth="757.0" styleClass="nen" stylesheets="@../style/ggTranslate.css" AnchorPane.bottomAnchor="14.399999999999977" AnchorPane.leftAnchor="67.8" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="14.4">
          <children>
             <TextArea fx:id="resultArea" layoutX="39.0" layoutY="270.0" prefHeight="158.0" prefWidth="662.0" styleClass="ketQua" />
-            <Button layoutX="164.0" layoutY="466.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="151.0" styleClass="buttonLanguage" text="Anh - Việt" textFill="#fcffe9" AnchorPane.leftAnchor="164.0">
+            <Button layoutX="164.0" layoutY="466.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="151.0" styleClass="buttonLanguage" text="Anh - Việt" textFill="#fefff7" AnchorPane.leftAnchor="164.0">
                <font>
                   <Font name="SVN-GilroyHeavy" size="16.0" />
                </font></Button>
-            <Button layoutX="443.0" layoutY="466.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="151.0" styleClass="buttonLanguage" text="Việt - Anh" textFill="#faffd6" AnchorPane.rightAnchor="164.0">
+            <Button layoutX="443.0" layoutY="466.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="151.0" styleClass="buttonLanguage" text="Việt - Anh" textFill="#fefff7" AnchorPane.rightAnchor="164.0">
                <font>
                   <Font name="SVN-GilroyHeavy" size="16.0" />
                </font></Button>
@@ -92,7 +92,10 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TextArea fx:id="textToTranslate1" layoutX="39.0" layoutY="38.0" onKeyPressed="#handlePressEnter" prefHeight="158.0" prefWidth="662.0" styleClass="ketQua" text="Nhập ..." />
+            <TextArea fx:id="textToTranslate1" layoutX="39.0" layoutY="38.0" onKeyPressed="#handlePressEnter" prefHeight="158.0" prefWidth="662.0" promptText="Nhập ..." styleClass="ketQua">
+               <font>
+                  <Font name="SVN-GilroyMedium" size="28.0" />
+               </font></TextArea>
          </children>
       </AnchorPane>
    </children>

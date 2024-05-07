@@ -20,7 +20,7 @@ public class MatchGame extends Game {
     }
 
     public void loadWords() {
-        String wordsFile = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
+        String wordsFile = "D:\\App\\Scene Builder\\tempOOP\\OOP\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
         String line;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(wordsFile))) {

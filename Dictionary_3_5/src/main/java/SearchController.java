@@ -28,7 +28,7 @@ public class SearchController extends GeneralController {
     private DictionaryManagement dictionaryManagement;
     private Word selectedWord;
     private final ObservableList<Word> wordList = FXCollections.observableArrayList();
-    private final String filepath = "D:\\Projects_workspace\\JAVAFX\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
+    private final String filepath = "D:\\App\\Scene Builder\\tempOOP\\OOP\\Dictionary_3_5\\src\\main\\base\\dictionaries.txt";
 
     @FXML
     private TextField searchField;

@@ -21,12 +21,12 @@
                         <HTMLEditor fx:id="editDefinition" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="-77.6" prefHeight="556.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                         <Label fx:id="gameTitle" alignment="TOP_CENTER" layoutX="183.0" layoutY="14.0" prefHeight="47.0" prefWidth="128.0" text="Nối Từ " textAlignment="CENTER" textFill="#1d93f3">
                             <font>
-                                <Font name="System Bold" size="36.0" />
+                                <Font name="SVN-GilroyHeavy" size="36.0" />
                             </font>
                         </Label>
-                        <Label fx:id="gameExplanation" alignment="TOP_CENTER" layoutX="23.0" layoutY="67.0" prefHeight="35.0" prefWidth="448.0" text="Kéo và thả từ tiếng Anh với nghĩa tiếng Việt tương ứng">
+                        <Label fx:id="gameExplanation" alignment="TOP_CENTER" layoutX="23.0" layoutY="67.0" prefHeight="35.0" prefWidth="448.0" text="Kéo và thả từ tiếng Anh với nghĩa tiếng Việt tương ứng" textFill="#11143b">
                             <font>
-                                <Font size="18.0" />
+                                <Font name="SanFranciscoDisplay-Medium" size="16.0" />
                             </font>
                         </Label>
                         <TextField fx:id="eng11" alignment="CENTER" layoutX="23.0" layoutY="115.0" onDragDetected="#handleDragDetect1e" prefHeight="47.0" prefWidth="108.0" styleClass="objectEng" text="estrangement">
@@ -145,7 +145,7 @@
                            <graphic>
                               <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@/image/Vector.png" />
+                                    <Image url="@/image/timKiemWhite.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -196,7 +196,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch2" alignment="CENTER" prefHeight="26.0" prefWidth="187.0" text="Chọn đáp án đúng" textFill="WHITE">
+                        <Label fx:id="titleSearch2" alignment="CENTER" prefHeight="26.0" prefWidth="187.0" styleClass="titlekChon" text="Chọn đáp án đúng" textFill="WHITE">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding>
@@ -206,9 +206,9 @@
                         </Label>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" layoutX="6.0" layoutY="203.0" prefHeight="144.0" prefWidth="227.0" styleClass="gamekochon" AnchorPane.bottomAnchor="191.6461653092067">
+                  <VBox alignment="CENTER" layoutX="6.0" layoutY="203.0" prefHeight="164.0" prefWidth="227.0" styleClass="chonGame" AnchorPane.topAnchor="204.0">
                      <children>
-                        <Button fx:id="matchingGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMatchingGame" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
+                        <Button fx:id="matchingGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMatchingGame" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
                            <graphic>
                               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -217,7 +217,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch21" alignment="CENTER" prefHeight="27.0" prefWidth="175.0" text="Nối từ" textFill="WHITE">
+                        <Label fx:id="titleSearch21" alignment="CENTER" prefHeight="27.0" prefWidth="175.0" styleClass="titleChon" text="Nối từ">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding>
@@ -227,7 +227,7 @@
                         </Label>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" layoutX="6.0" layoutY="394.0" prefHeight="164.0" prefWidth="227.0" styleClass="gamekochon">
+                  <VBox alignment="CENTER" layoutX="6.0" layoutY="394.0" prefHeight="164.0" prefWidth="227.0" styleClass="gamekochon" AnchorPane.topAnchor="394.0">
                      <children>
                         <Button fx:id="listenGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="131.0" prefWidth="153.0" styleClass="button2">
                            <graphic>
@@ -238,7 +238,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch22" alignment="CENTER" prefHeight="26.0" prefWidth="187.0" text="Nghe và nhập từ" textFill="WHITE">
+                        <Label fx:id="titleSearch22" alignment="CENTER" prefHeight="26.0" prefWidth="187.0" styleClass="titlekChon" text="Nghe và nhập từ" textFill="WHITE">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding>

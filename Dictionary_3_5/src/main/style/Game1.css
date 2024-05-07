@@ -133,4 +133,21 @@
     -fx-border-color: #ffffff;
     -fx-text-fill: #0a3684;
 }
-/*=====================================================*/
+
+.titleChon {
+    -fx-font-family: "SVN-Gilroy XBold";
+    -fx-font-size: 18px;
+    -fx-text-fill: 1D93F3;
+}
+
+.titlekChon {
+    -fx-font-family: "SVN-Gilroy XBold";
+    -fx-font-size: 18px;
+    -fx-text-fill: #ffffff;
+}
+
+.buttonThuong {
+    -fx-background-color: #238FE7;
+    -fx-background-radius: 5 5 5 5; /* Bo tròn góc nền */
+    -fx-border-radius: 5 5 5 5; /* Bo tròn góc viền */
+}
