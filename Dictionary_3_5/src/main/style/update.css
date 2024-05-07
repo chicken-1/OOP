@@ -1,0 +1,87 @@
+.textArea {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #C0C2C4;
+    -fx-text-fill: #0a3684;
+    -fx-background-radius: 5 5 5 5; /* Bo tròn góc nền */
+    -fx-border-radius: 5 5 5 5; /* Bo tròn góc viền */
+}
+
+.OKBtn {
+    -fx-background-color: #1D93F3;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.OKBtn:hover {
+    -fx-background-color: #5FB2F5;
+    -fx-text-fill: #000000;
+    -fx-font-size: 20px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.OKBtn:pressed {
+    -fx-background-color: #1D93F3;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.exitBtn {
+    -fx-background-color: #D86859;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.exitBtn:hover {
+    -fx-background-color: #FA4D5E;
+    -fx-text-fill: #000000;
+    -fx-font-size: 20px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.exitBtn:pressed {
+    -fx-background-color: #D86859;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.buttonChon {
+    -fx-background-color: #1D93F3;
+    -fx-text-fill: #000000;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-font-size: 12px;
+    -fx-background-radius: 3 3 3 3; /* Bo tròn góc nền */
+    -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
+}
+
+.button1 {
+    -fx-background-color: #D86859;
+}
+
+.button2 {
+    -fx-background-color: #238FE7;
+}
+
+.buttonKoChon {
+    -fx-background-color: #1D93F3;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-font-size: 12px;
+    -fx-background-radius: 3 3 3 3; /* Bo tròn góc nền */
+    -fx-border-radius: 3 3 3 3; /* Bo tròn góc viền */
+}
