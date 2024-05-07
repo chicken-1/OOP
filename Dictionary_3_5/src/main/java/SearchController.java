@@ -125,6 +125,7 @@ public class SearchController extends GeneralController {
                         "font-size: 20px; color: #000000;" +
                         "text-align: center; padding-top: 20px;'>" + word.getWord_explain() + "</div>" +
                         "</body></html>");
+        definitionView.setVisible(true);
     }
 
     @FXML
