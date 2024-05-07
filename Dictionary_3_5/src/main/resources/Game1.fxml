@@ -154,7 +154,7 @@
                            <graphic>
                               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../image/4x/loud-speaker_12630089.png" />
+                                    <Image url="@../image/4x/gamenghedien.png" />
                                  </image>
                               </ImageView>
                            </graphic>
