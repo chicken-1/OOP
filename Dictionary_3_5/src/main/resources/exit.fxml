@@ -6,27 +6,35 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="225.0" prefWidth="423.0" stylesheets="@../style/dialog.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameController">
+<AnchorPane prefHeight="206.0" prefWidth="359.0" stylesheets="@../style/dialog.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameController">
     <children>
-        <HBox layoutX="-1.0" prefHeight="67.0" prefWidth="430.0" styleClass="button1" stylesheets="@../style/dialog.css">
+        <HBox layoutX="-1.0" prefHeight="63.0" prefWidth="360.0" styleClass="button1" stylesheets="@../style/dialog.css">
             <children>
                 <Label alignment="CENTER" layoutX="300.0" layoutY="300.0" prefHeight="69.0" prefWidth="431.0" text="Thoát" textFill="WHITE">
                     <font>
-                        <Font size="36.0" />
+                        <Font size="28.0" />
                     </font>
                 </Label>
             </children>
         </HBox>
-        <Label layoutX="15.0" layoutY="95.0" text="Bạn có chắc chắn muốn thoát không?">
+        <Label layoutX="13.0" layoutY="82.0" text="Bạn có chắc chắn muốn thoát không?">
             <font>
-                <Font size="24.0" />
+                <Font size="20.0" />
             </font>
         </Label>
+<<<<<<< Updated upstream
         <Button fx:id="OKBtn" layoutX="65.0" layoutY="155.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="97.0" styleClass="exitBtn" stylesheets="@../style/dialog.css" text="OK" textFill="WHITE">
+=======
+        <Button fx:id="OKBtn" layoutX="54.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#handleClickOK" prefHeight="29.0" prefWidth="97.0" styleClass="exitBtn" stylesheets="@../style/dialog.css" text="OK" textFill="WHITE">
+>>>>>>> Stashed changes
             <font>
-                <Font size="24.0" />
+                <Font size="20.0" />
             </font>
         </Button>
+<<<<<<< Updated upstream
       <Button fx:id="cancelBtn" layoutX="273.0" layoutY="155.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="97.0" styleClass="OKBtn" stylesheets="@../style/dialog.css" text="Hủy" />
+=======
+      <Button fx:id="cancelBtn" layoutX="210.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#handleClickCancel" prefHeight="39.0" prefWidth="97.0" styleClass="OKBtn" stylesheets="@../style/dialog.css" text="Hủy" />
+>>>>>>> Stashed changes
     </children>
 </AnchorPane>

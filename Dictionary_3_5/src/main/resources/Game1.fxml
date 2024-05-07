@@ -66,7 +66,11 @@
                            <graphic>
                               <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
+<<<<<<< Updated upstream
                                     <Image url="@/image/Vector.png" />
+=======
+                                    <Image url="@../image/timKiemWhite.png" />
+>>>>>>> Stashed changes
                                  </image>
                               </ImageView>
                            </graphic>
@@ -106,9 +110,9 @@
             </AnchorPane>
             <AnchorPane layoutX="65.0" prefHeight="575.0" prefWidth="239.0" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <VBox alignment="CENTER" layoutX="6.0" layoutY="14.0" prefHeight="164.0" prefWidth="227.0" styleClass="gamekochon" AnchorPane.topAnchor="14.0">
+                  <VBox alignment="CENTER" layoutX="6.0" layoutY="14.0" prefHeight="164.0" prefWidth="227.0" styleClass="chonGame" AnchorPane.topAnchor="14.0">
                      <children>
-                        <Button fx:id="multiChoiceGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="131.0" prefWidth="153.0" styleClass="button2">
+                        <Button fx:id="multiChoiceGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="131.0" prefWidth="153.0" styleClass="button1">
                            <graphic>
                               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -117,7 +121,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch2" alignment="CENTER" prefHeight="26.0" prefWidth="187.0" text="Chọn đáp án đúng" textFill="WHITE">
+                        <Label fx:id="titleSearch2" alignment="CENTER" prefHeight="26.0" prefWidth="187.0" text="Chọn đáp án đúng" textFill="#1d93f3">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding>

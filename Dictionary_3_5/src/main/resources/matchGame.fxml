@@ -145,7 +145,11 @@
                            <graphic>
                               <ImageView fitHeight="26.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
+<<<<<<< Updated upstream
                                     <Image url="@/image/Vector.png" />
+=======
+                                    <Image url="@../image/timKiemWhite.png" />
+>>>>>>> Stashed changes
                                  </image>
                               </ImageView>
                            </graphic>
@@ -206,9 +210,9 @@
                         </Label>
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" layoutX="6.0" layoutY="203.0" prefHeight="144.0" prefWidth="227.0" styleClass="gamekochon" AnchorPane.bottomAnchor="191.6461653092067">
+                  <VBox alignment="CENTER" layoutX="6.0" layoutY="203.0" prefHeight="144.0" prefWidth="227.0" styleClass="chonGame" AnchorPane.bottomAnchor="191.6461653092067">
                      <children>
-                        <Button fx:id="matchingGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMatchingGame" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
+                        <Button fx:id="matchingGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMatchingGame" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
                            <graphic>
                               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -217,7 +221,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="titleSearch21" alignment="CENTER" prefHeight="27.0" prefWidth="175.0" text="Nối từ" textFill="WHITE">
+                        <Label fx:id="titleSearch21" alignment="CENTER" prefHeight="27.0" prefWidth="175.0" text="Nối từ" textFill="#1d93f3">
                            <padding>
                               <Insets bottom="10.0" />
                            </padding>
