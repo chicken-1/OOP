@@ -67,6 +67,60 @@
     -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
 }
 
+.nextBtn {
+    -fx-background-color: #1D93F3;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.nextBtn:hover {
+    -fx-background-color: #5FB2F5;
+    -fx-text-fill: #000000;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.nextBtn:pressed {
+    -fx-background-color: #1D93F3;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.exitBtn {
+    -fx-background-color: #D86859;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.exitBtn:hover {
+    -fx-background-color: #FA4D5E;
+    -fx-text-fill: #000000;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
+.exitBtn:pressed {
+    -fx-background-color: #D86859;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-family: "SVN-Gilroy SemiBold";
+    -fx-background-radius: 10 10 10 10; /* Bo tròn góc nền */
+    -fx-border-radius: 10 10 10 10; /* Bo tròn góc viền */
+}
+
 .panecolor1 {
     -fx-background-color: #1D93F3; /* Màu nền của pane */
 }

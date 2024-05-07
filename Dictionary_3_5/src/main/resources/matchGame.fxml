@@ -52,7 +52,7 @@
                     <children>
                         <VBox alignment="CENTER" layoutX="7.0" layoutY="25.0" prefHeight="242.0" prefWidth="226.0" styleClass="gamekochon" AnchorPane.topAnchor="35.0">
                             <children>
-                                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
+                                <Button fx:id="mutlChoice_game" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMultiGame" prefHeight="38.0" prefWidth="38.0" styleClass="button2">
                                     <graphic>
                                         <ImageView fx:id="multiChoice_game" fitHeight="182.0" fitWidth="182.0" onMouseClicked="#handleClickMulti_game" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -69,7 +69,7 @@
                         </VBox>
                         <VBox alignment="CENTER" layoutX="7.0" layoutY="288.0" prefHeight="242.0" prefWidth="226.0" styleClass="chonGame" AnchorPane.bottomAnchor="35.0">
                             <children>
-                                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
+                                <Button fx:id="matching_game" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickMatchingGame" prefHeight="38.0" prefWidth="38.0" styleClass="button1">
                                     <graphic>
                                         <ImageView fx:id="matching_ame" fitHeight="182.0" fitWidth="182.0" onMouseClicked="#handleClickMatching_game" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -78,7 +78,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Label fx:id="titleSearch21" alignment="CENTER" onMouseClicked="#handleClickMatching_game" prefHeight="120.0" prefWidth="204.0" text="Nối từ" textFill="#1d93f3">
+                                <Label fx:id="titleSearch21" alignment="CENTER" onMouseClicked="#s" prefHeight="120.0" prefWidth="204.0" text="Nối từ" textFill="#1d93f3">
                                     <padding>
                                         <Insets bottom="10.0" />
                                     </padding></Label>
@@ -154,57 +154,57 @@
                             </font>
                         </TextField>
                         <HBox fx:id="answer11" layoutX="176.0" layoutY="115.0" prefHeight="47.0" prefWidth="108.0">
-                     <children>
-                        <TextField fx:id="ans11" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
-                           <font>
-                              <Font size="14.0" />
-                           </font></TextField>
-                     </children></HBox>
-                  <HBox fx:id="answer12" layoutX="176.0" layoutY="190.0" prefHeight="47.0" prefWidth="108.0">
-                     <children>
-                        <TextField fx:id="ans12" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
-                           <font>
-                              <Font size="14.0" />
-                           </font></TextField>
-                     </children>
-                  </HBox>
-                  <HBox fx:id="answer13" layoutX="176.0" layoutY="270.0" prefHeight="47.0" prefWidth="108.0">
-                     <children>
-                        <TextField fx:id="ans13" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </HBox>
-                  <HBox fx:id="answer14" layoutX="176.0" layoutY="350.0" prefHeight="47.0" prefWidth="108.0">
-                     <children>
-                        <TextField fx:id="ans14" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </HBox>
-                  <HBox fx:id="answer15" layoutX="176.0" layoutY="430.0" prefHeight="47.0" prefWidth="108.0">
-                     <children>
-                        <TextField fx:id="ans15" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </HBox>
-                  <Button fx:id="submitBtn" layoutX="350.0" layoutY="496.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" styleClass="submitBtn" stylesheets="@../style/matchingGame.css" text="Nộp">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="exitBtn" layoutX="51.0" layoutY="496.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" styleClass="exitBtn" stylesheets="@../style/matchingGame.css" text="Thoát">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Button>
+                            <children>
+                                <TextField fx:id="ans11" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font></TextField>
+                            </children></HBox>
+                        <HBox fx:id="answer12" layoutX="176.0" layoutY="190.0" prefHeight="47.0" prefWidth="108.0">
+                            <children>
+                                <TextField fx:id="ans12" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font></TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="answer13" layoutX="176.0" layoutY="270.0" prefHeight="47.0" prefWidth="108.0">
+                            <children>
+                                <TextField fx:id="ans13" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="answer14" layoutX="176.0" layoutY="350.0" prefHeight="47.0" prefWidth="108.0">
+                            <children>
+                                <TextField fx:id="ans14" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="answer15" layoutX="176.0" layoutY="430.0" prefHeight="47.0" prefWidth="108.0">
+                            <children>
+                                <TextField fx:id="ans15" alignment="CENTER" prefHeight="47.0" prefWidth="108.0" styleClass="answer" text="answer">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <Button fx:id="submitBtn" layoutX="350.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickSubmit" prefHeight="35.0" prefWidth="80.0" styleClass="submitBtn" stylesheets="@../style/matchingGame.css" text="Nộp">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="exitBtn" layoutX="51.0" layoutY="496.0" mnemonicParsing="false" onMouseClicked="#handleClickExit" prefHeight="35.0" prefWidth="80.0" styleClass="exitBtn" stylesheets="@../style/matchingGame.css" text="Thoát">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Button>
                     </children>
                 </AnchorPane>
             </children>
