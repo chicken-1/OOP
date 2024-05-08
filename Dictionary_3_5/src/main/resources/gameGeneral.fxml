@@ -104,7 +104,7 @@
                         </VBox>
                   <VBox alignment="CENTER" layoutX="6.0" layoutY="394.0" prefHeight="164.0" prefWidth="227.0" styleClass="gamekochon">
                      <children>
-                        <Button fx:id="listenGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="131.0" prefWidth="153.0" styleClass="button2">
+                        <Button fx:id="listenGame" alignment="BOTTOM_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClickListenGame" prefHeight="131.0" prefWidth="153.0" styleClass="button2">
                            <graphic>
                               <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@/style/listenGame.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameController">
+<AnchorPane prefHeight="600.0" prefWidth="841.0" styleClass="panecolor1" stylesheets="@/style/listenGame.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game3Controller">
     <children>
         <AnchorPane layoutX="40.0" prefHeight="600.0" prefWidth="319.0" styleClass="panecolor1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -130,7 +130,7 @@
         </AnchorPane>
         <AnchorPane layoutX="320.8" prefHeight="573.0" prefWidth="501.0" style="-fx-background-radius: 10; -fx-background-color: ffffff;" styleClass="first-color" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="321.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
             <children>
-                <AnchorPane layoutX="11.815384962093205" layoutY="2.215384680392476" prefHeight="566.0" prefWidth="484.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="2.0">
+                <AnchorPane fx:id="anchorGamePane" layoutX="11.815384962093205" layoutY="2.215384680392476" prefHeight="566.0" prefWidth="484.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="2.0">
                     <children>
                         <HTMLEditor fx:id="editDefinition" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="-77.6" prefHeight="556.0" prefWidth="485.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                   <Label fx:id="gameTitle" alignment="TOP_CENTER" layoutX="82.0" layoutY="63.0" prefHeight="55.0" prefWidth="319.0" text="Nghe Và Nhập Từ" textAlignment="CENTER" textFill="#1d93f3">
@@ -167,17 +167,17 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <TextField fx:id="word" layoutX="179.0" layoutY="223.0" prefHeight="53.0" prefWidth="199.0" promptText="Từ vừa nghe:" styleClass="textArea" stylesheets="@/style/update.css">
+                  <TextField fx:id="answer" layoutX="179.0" layoutY="223.0" prefHeight="53.0" prefWidth="199.0" promptText="Từ vừa nghe:" styleClass="textArea" stylesheets="@/style/update.css">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="exitBtn" layoutX="67.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#handleClickExit" prefHeight="47.0" prefWidth="102.0" styleClass="exitBtn" stylesheets="@/style/listenGame.css" text="Thoát">
+                  <Button fx:id="exitBtn" layoutX="25.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleClickExit" prefHeight="47.0" prefWidth="102.0" styleClass="exitBtn" stylesheets="@/style/listenGame.css" text="Thoát">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Button>
-                  <Button fx:id="submitBtn" layoutX="312.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#handleClickSubmit" prefHeight="47.0" prefWidth="103.0" styleClass="submitBtn" stylesheets="@/style/listenGame.css" text="Nộp">
+                  <Button fx:id="submitBtn" layoutX="155.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleClickSubmit" prefHeight="47.0" prefWidth="103.0" styleClass="submitBtn" stylesheets="@/style/listenGame.css" text="Nộp">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -197,6 +197,11 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
+                  <Button fx:id="nextBtn" layoutX="290.0" layoutY="334.0" mnemonicParsing="false" onAction="#handleClickNext" prefHeight="47.0" prefWidth="175.0" styleClass="submitBtn" stylesheets="@/style/listenGame.css" text="Câu tiếp theo">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
                     </children>
                 </AnchorPane>
             </children>

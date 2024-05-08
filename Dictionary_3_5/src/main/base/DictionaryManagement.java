@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class DictionaryManagement {
    
-    private Dictionary dictionary;
+    public Dictionary dictionary;
     //private sortDictionary sort0;
 
     public DictionaryManagement() {

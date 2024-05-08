@@ -146,11 +146,7 @@ public class MatchingGameController extends GameController {
             engTextCopy.get(i).setEditable(false);
             engTextCopy.get(i).setVisible(true);*/
         }
-
-
-
-
-    }
+}
 
     public String getVietText(String input) {
         if (input.contains(",") && !input.contains("(")) {
