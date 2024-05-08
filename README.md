@@ -24,5 +24,6 @@ We use JavaFX and Scene Builder for front-end development. Inheritance trees for
 ## Inheritance trees
 ![plot](https://github.com/chicken-1/OOP/blob/main/Dictionary_3_5/src/main/image/commandline.drawio.png?raw=true)
 - Command Line version
+
 ![plot](https://github.com/chicken-1/OOP/blob/main/Dictionary_3_5/src/main/image/gui.drawio.png?raw=true)
 - GUI version
