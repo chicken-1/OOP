@@ -15,8 +15,12 @@ Our project includes developing a command line version and a graphic user interf
 - Lookup function to search for any words from the personalized dictionary.
 - Interactive games to memorize vocabulary and review grammar.
 
-We use JavaFX and Scene Builder for front-end development. Inheritance trees for each version are also included in the repository.
+We use JavaFX and Scene Builder for front-end development. Inheritance trees for each version are also included below.
 
 ## Content
 - [Version 1: Command Line](https://github.com/chicken-1/OOP/tree/main/Dictionary_3_5/src/main/base)
 - [Version 2: Graphic User Interface (GUI)](https://github.com/chicken-1/OOP/tree/main/Dictionary_3_5/src/main/java)
+
+## Inheritance trees
+- Command Line version ![plot](https://github.com/chicken-1/OOP/blob/main/Dictionary_3_5/src/main/image/commandline.drawio.png?raw=true)
+- GUI version
